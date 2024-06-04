@@ -1,6 +1,3 @@
-//estos son los botones
-let btnEnviar = document.getElementById("btnEnviar");
-
 //variables de inputs
 let txtNombre = document.getElementById("nombre");
 let txtEmail = document.getElementById("email");
@@ -9,6 +6,8 @@ let txtMensaje = document.getElementById("mensaje");
 
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
+let alertEnviadoTexto = document.getElementById("alertEnviadoTexto");
+let alertEnviado = document.getElementById("alertEnviado");
 
 let isValid = true;
 
@@ -47,6 +46,11 @@ function validarMensaje(){
     }
     return true;
 }
+function errorEmail(){
+    alertValidacionesTexto.innerHTML="Verifica que tu <strong>Email</strong> sea correcto.";
+    alertValidaciones.style.display="block";
+    txtEmail.style.border="solid red medium";
+}
 
 function validarEmail(){
     const email = txtEmail.value;
@@ -55,18 +59,19 @@ function validarEmail(){
     const dotIndex = email.indexOf(".");
     const invalidChars = [' ', '!', '#', '$', '%', '&', '*', '(', ')', '+', ',', '/', ':', ';', '<', '=', '>', '?', '[', '\\', ']', '^', '`', '{', '|', '}', '~'];
     if(txtEmail.value.length==0){
-        alertValidacionesTexto.innerHTML="-Escribe tu <strong>Email</strong>, por favor.";
-        alertValidaciones.style.display="block";
-        txtEmail.style.border="solid red medium";
+        errorEmail();
         return false;
     }
     if(atIndex<=0 || atIndex==(email.length-1)){
+        errorEmail();
         return false;
     };
     if(dotIndex<=0 || dotIndex==(dominio.length-1)){
+        errorEmail();
         return false;
     };
     if(dominio.includes("..")){
+        errorEmail();
         return false;
     };
     for(let char of invalidChars){
@@ -77,17 +82,30 @@ function validarEmail(){
     return true;
 }
 
-btnEnviar.addEventListener("click", function(event){
-    event.preventDefault();
-    alertValidacionesTexto.innerHTML="";
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+   alertValidacionesTexto.innerHTML="";
     alertValidaciones.style.display="none";
     txtNombre.style.border="";
     txtTelefono.style.border="";
     txtMensaje.style.border="";
-    isValid=validarNombre();
-    isValid=validarTelefono();
-    isValid=validarMensaje();
-    isValid=validarEmail();
-    console.log(isValid);
-    console.log(txtEmail.value);
+    txtEmail.style.border="";
+    alertEnviadoTexto.innerHTML="";
+    alertEnviado.style.display="none";
+
+    if(validarNombre() && validarEmail() && validarTelefono() && validarMensaje()){
+        const serviceID = 'default_service';
+   const templateID = 'template_61pzqvk';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+     alertEnviadoTexto.innerHTML = "El mensaje ha sido enviado exitosamente.";
+     alertEnviado.style.display = "block";
+    }, (err) => {
+      alert(JSON.stringify(err));
+    });
+    }
 });
