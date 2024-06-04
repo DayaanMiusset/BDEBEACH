@@ -13,7 +13,7 @@ let isValid = true;
 
 function validarNombre(){
     if(txtNombre.value.length<3){
-        alertValidacionesTexto.innerHTML="-El <strong>Nombre</strong> debe tener al menos 3 caracteres.<br>";
+        alertValidacionesTexto.innerHTML="- El <strong>Nombre</strong> debe tener al menos 3 caracteres.<br>";
         alertValidaciones.style.display="block";
         txtNombre.style.border="solid red medium";
         return false;
@@ -23,13 +23,13 @@ function validarNombre(){
 
 function validarTelefono(){
     if(txtTelefono.value.length<10 || txtTelefono.value.length>10){
-        alertValidacionesTexto.innerHTML+="-El <strong>Télefono</strong> debe tener al menos 10 caracteres.<br>";
+        alertValidacionesTexto.innerHTML+="- El <strong>Télefono</strong> debe tener al menos 10 caracteres.<br>";
         alertValidaciones.style.display="block";
         txtTelefono.style.border="solid red medium";
         return false;
     }
     if(isNaN(txtTelefono.value)){
-        alertValidacionesTexto.innerHTML+="-El campo <strong>Télefono</strong> solo puede contener <strong>números</strong>.";
+        alertValidacionesTexto.innerHTML+="- El campo <strong>Télefono</strong> solo puede contener <strong>números</strong>.";
         alertValidaciones.style.display="block";
         txtTelefono.style.border="solid red medium";
         return false;
@@ -38,8 +38,9 @@ function validarTelefono(){
 }
 
 function validarMensaje(){
-    if(txtMensaje.value.length<10 || txtMensaje.value.length>1000){
-        alertValidacionesTexto.innerHTML="-Tu opinión es muy valiosa, por favor no excedas los 1000 carácteres";
+    const mensaje = txtMensaje.value.trim();
+    if (mensaje.length === 0 || mensaje.length > 1000){
+        alertValidacionesTexto.innerHTML="- Tu opinión es muy valiosa, por favor no excedas los 1000 carácteres";
         alertValidaciones.style.display="block";
         txtMensaje.style.border="solid red medium";
         return false;
@@ -47,7 +48,7 @@ function validarMensaje(){
     return true;
 }
 function errorEmail(){
-    alertValidacionesTexto.innerHTML="Verifica que tu <strong>Email</strong> sea correcto.";
+    alertValidacionesTexto.innerHTML="- Verifica que tu <strong>Email</strong> sea correcto.";
     alertValidaciones.style.display="block";
     txtEmail.style.border="solid red medium";
 }
