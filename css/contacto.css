@@ -66,19 +66,6 @@ main {
     background-color: #2188377d;
 }
 
-<<<<<<< HEAD
-
-
-
-
-
-/* FORMATO DEL HEADER NAVEGADOR INICIA*/
-.nav-link:hover{
-    background-color: #dcb780a6;
-    border-radius: 2rem;
-}
-.titulo{
-=======
 /* FORMATO DEL HEADER NAVEGADOR INICIA */
 .nav-link:hover {
     background-color: #dcb780a6;
@@ -86,39 +73,11 @@ main {
 }
 
 .titulo {
->>>>>>> arely
     margin-top: 6rem;
     font-family: literata;
     margin-left: 3rem;
     margin-right: 3rem;
 }
-<<<<<<< HEAD
-.navbar-brand:hover{
-    opacity: 1;
-    margin: 0.2rem;
-    object-fit: cover;
-}
-.navbarbtn{
-    background-color: #DCB780;
-    border-color: #DCB780;
-}
-
-/*FORMATO DEL HEADER NAVEGADOR FINALIZA*/
-
-
-/*FORMATO DEL FOOTER*/
-.footer{
-    background-color:  #A4A290;
-}
-.footer a{
-    color: white;
-}
-
-.footer-p{
-    color: white;
-}
-/*FORMATO DE FOOTER FINALIZA*/
-=======
 
 /* FORMATO DEL FOOTER */
 .footer {
@@ -136,4 +95,3 @@ main {
     color: white;
     text-align: center;
 }
->>>>>>> arely
