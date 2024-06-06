@@ -66,32 +66,35 @@ main {
     background-color: #2188377d;
 }
 
-/* FORMATO DEL HEADER NAVEGADOR INICIA */
-.nav-link:hover {
+
+
+
+
+
+/* FORMATO DEL HEADER NAVEGADOR INICIA*/
+.nav-link:hover{
     background-color: #dcb780a6;
     border-radius: 2rem;
 }
-
-.titulo {
+.titulo{
     margin-top: 6rem;
     font-family: literata;
     margin-left: 3rem;
     margin-right: 3rem;
 }
 
-/* FORMATO DEL FOOTER */
-.footer {
-    background-color: #A4A290;
-    padding: 20px 0;
-    width: 100%;
-    text-align: center;
-}
+/*FORMATO DEL HEADER NAVEGADOR FINALIZA*/
 
-.footer a {
+
+/*FORMATO DEL FOOTER*/
+.footer{
+    background-color:  #A4A290;
+}
+.footer a{
     color: white;
 }
 
-.footer-p {
+.footer-p{
     color: white;
-    text-align: center;
 }
+/*FORMATO DE FOOTER FINALIZA*/

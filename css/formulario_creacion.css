@@ -10,15 +10,7 @@
     margin-left: 3rem;
     margin-right: 3rem;
 }
-.navbar-brand:hover{
-    opacity: 1;
-    margin: 0.2rem;
-    object-fit: cover;
-}
-.navbarbtn{
-    background-color: #DCB780;
-    border-color: #DCB780;
-}
+
 
 
 /*FORMATO DEL HEADER NAVEGADOR FINALIZA*/
