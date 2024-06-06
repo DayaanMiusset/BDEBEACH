@@ -66,6 +66,7 @@ main {
     background-color: #2188377d;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -77,11 +78,21 @@ main {
     border-radius: 2rem;
 }
 .titulo{
+=======
+/* FORMATO DEL HEADER NAVEGADOR INICIA */
+.nav-link:hover {
+    background-color: #dcb780a6;
+    border-radius: 2rem;
+}
+
+.titulo {
+>>>>>>> arely
     margin-top: 6rem;
     font-family: literata;
     margin-left: 3rem;
     margin-right: 3rem;
 }
+<<<<<<< HEAD
 .navbar-brand:hover{
     opacity: 1;
     margin: 0.2rem;
@@ -107,3 +118,22 @@ main {
     color: white;
 }
 /*FORMATO DE FOOTER FINALIZA*/
+=======
+
+/* FORMATO DEL FOOTER */
+.footer {
+    background-color: #A4A290;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer-p {
+    color: white;
+    text-align: center;
+}
+>>>>>>> arely
