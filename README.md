@@ -30,3 +30,4 @@ B de Beach ofrece trajes de baño exclusivos, confeccionados con materiales prem
 - **Backend**: Java 
 - **Base de Datos**: MySQL
 - **Control de Versiones**: Git
+

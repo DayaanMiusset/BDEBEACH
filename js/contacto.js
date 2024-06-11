@@ -4,12 +4,35 @@ let txtEmail = document.getElementById("email");
 let txtTelefono = document.getElementById("telefono");
 let txtMensaje = document.getElementById("mensaje");
 
+let listaMenu = document.getElementById("listaMenu"); //
+
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 let alertEnviadoTexto = document.getElementById("alertEnviadoTexto");
 let alertEnviado = document.getElementById("alertEnviado");
 
+
+let menuNavegador = [
+    {
+        "titulo":"Inicio",
+        "link": "./index.html"
+    },
+    {
+        "titulo":"Cátalogo",
+        "link": "./catalogo.html"
+    }
+];
+
 let isValid = true;
+function agregarElementoMenu(menu){
+    menu.forEach(elemento => {
+        listaMenu.insertAdjacentHTML("beforebegin", 
+            `<li class="nav-item">
+                <a class="nav-link active" aria-current="page" href=" ${elemento.link}"> ${elemento.titulo}</a>
+            </li>`
+        );
+    });  
+}//agregarElementoMenu --> en esta función agregamos los elemento, por HTML, del menu a la barra de navegación a través del JSON.
 
 function validarNombre(){
     if(txtNombre.value.length<3){
@@ -110,3 +133,7 @@ document.getElementById('form')
     });
     }
 });
+
+
+
+agregarElementoMenu(menuNavegador);  //Mandamos llamar la función para agregar el menú a la barra de navegación
