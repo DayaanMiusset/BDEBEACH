@@ -87,7 +87,7 @@ main {
     float:right;
 }
 
-button {
+.btnCrear {
     width: 100%;
     padding: 10px;
     background-color: #8ea72892;

@@ -1,4 +1,6 @@
-
+.album_catalogo{
+    margin-top: 5rem;
+}
 
 /*COPIA TODO EL CÓDIGO DE ABAJO EN EL CSS PARA EL FORMATO DEL NAV Y FOOTER*/
 
@@ -13,11 +15,7 @@
     margin-left: 3rem;
     margin-right: 3rem;
 }
-
-
-
 /*FORMATO DEL HEADER NAVEGADOR FINALIZA*/
-
 
 /*FORMATO DEL FOOTER*/
 .footer{
