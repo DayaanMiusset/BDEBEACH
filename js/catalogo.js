@@ -72,8 +72,7 @@ function addItem(item){
         <p class="card-text"><strong>${item.title}</strong></p>
          <small class="card-text">${item.description}</small>
           <br><br>
-          <label for="exampleColorInput" class="form-label"></label>
-          <input type="color" class="form-control form-control-color" id="exampleColorInput" value="${item.tono}" title="Choose your color">
+        <div id="colores"></div>
           <div class="d-flex ms-auto">
            <small class="price" >$ ${item.price}</small>
            </div>
@@ -252,4 +251,7 @@ function addItem(item){
 
 items.forEach(item => addItem(item));
 
-
+items.forEach(item=> addColors(item));
+function addColors(articulo){
+console.log(articulo.color);
+}
