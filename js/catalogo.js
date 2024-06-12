@@ -62,6 +62,15 @@ barraNavegacion.insertAdjacentHTML("beforeend",
 )
 
 function addItem(item){
+  let tonos = item.color;
+  console.log(tonos);
+  let coloresHTML="";
+
+  tonos.forEach(color => {
+    coloresHTML += `
+    <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."  style ="background-color: ${color}">
+    `
+  });
  
   const itemsContainer = document.getElementById("list-items");
   itemsContainer.insertAdjacentHTML ("beforeend", `<div class="col-md-4">
@@ -72,7 +81,9 @@ function addItem(item){
         <p class="card-text"><strong>${item.title}</strong></p>
          <small class="card-text">${item.description}</small>
           <br><br>
-        <div id="colores"></div>
+        <div>
+        ${coloresHTML}
+        </div>
           <div class="d-flex ms-auto">
            <small class="price" >$ ${item.price}</small>
            </div>
@@ -251,7 +262,7 @@ function addItem(item){
 
 items.forEach(item => addItem(item));
 
-items.forEach(item=> addColors(item));
+/* items.forEach(item=> addColors(item));
 function addColors(articulo){
 console.log(articulo.color);
-}
+} */
