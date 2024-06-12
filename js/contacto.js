@@ -21,7 +21,9 @@ function validarNombre(){
         alertValidacionesTexto.innerHTML="- El <strong>Nombre</strong> debe tener al menos 3 caracteres.<br>";
         alertValidaciones.style.display="block";
         txtNombre.style.border="solid red medium";
+        txtNombre.focus();
         return false;
+      
     }
     return true;
 }
@@ -31,15 +33,25 @@ function validarTelefono(){
         alertValidacionesTexto.innerHTML+="- El <strong>Télefono</strong> debe tener al menos 10 caracteres.<br>";
         alertValidaciones.style.display="block";
         txtTelefono.style.border="solid red medium";
+        txtTelefono.focus();
         return false;
     }
     if(isNaN(txtTelefono.value)){
         alertValidacionesTexto.innerHTML+="- El campo <strong>Télefono</strong> solo puede contener <strong>números</strong>.";
         alertValidaciones.style.display="block";
         txtTelefono.style.border="solid red medium";
+        txtTelefono.focus();
         return false;
     };
-    return true;
+    if(txtTelefono.value == "0000000000"){
+      alertValidacionesTexto.innerHTML+="- El campo <strong>Télefono</strong> no debe de contener sólo ceros.";
+      alertValidaciones.style.display="block";
+      txtTelefono.style.border="solid red medium";
+      txtTelefono.focus();
+
+      return false;
+  };
+  return true;
 }
 
 function validarMensaje(){
@@ -48,6 +60,7 @@ function validarMensaje(){
         alertValidacionesTexto.innerHTML="- Tu opinión es muy valiosa, por favor no excedas los 1000 carácteres";
         alertValidaciones.style.display="block";
         txtMensaje.style.border="solid red medium";
+        txtMensaje.focus();
         return false;
     }
     return true;
@@ -66,22 +79,27 @@ function validarEmail(){
     const invalidChars = [' ', '!', '#', '$', '%', '&', '*', '(', ')', '+', ',', '/', ':', ';', '<', '=', '>', '?', '[', '\\', ']', '^', '`', '{', '|', '}', '~'];
     if(txtEmail.value.length==0){
         errorEmail();
+        txtEmail.focus();
         return false;
     }
     if(atIndex<=0 || atIndex==(email.length-1)){
         errorEmail();
+        txtEmail.focus();
         return false;
     };
     if(dotIndex<=0 || dotIndex==(dominio.length-1)){
         errorEmail();
+        txtEmail.focus();
         return false;
     };
     if(dominio.includes("..")){
         errorEmail();
+        txtEmail.focus();
         return false;
     };
     for(let char of invalidChars){
         if(email.includes(char)){
+          txtEmail.focus();
             return false;
         }
     }
@@ -108,6 +126,12 @@ document.getElementById('form')
 
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
+     txtNombre.value="";
+     txtTelefono.value="";
+     txtMensaje.value="";
+     txtEmail.value="";
+     
+
      alertEnviadoTexto.innerHTML = "El mensaje ha sido enviado exitosamente.";
      alertEnviado.style.display = "block";
     }, (err) => {
@@ -135,7 +159,7 @@ barraNavegacion.insertAdjacentHTML("beforeend",
                           <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="./catalogo.html">Cátalogo</a>
+                          <a class="nav-link active" aria-current="page" href="./catalogo.html">Catálogo</a>
                         </li>
 
                         <li class="nav-item dropdown" ">
@@ -143,7 +167,7 @@ barraNavegacion.insertAdjacentHTML("beforeend",
                             Más
                           </a>
                           <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./conocenos.html">Conocenos</a></li>
+                            <li><a class="dropdown-item" href="./conocenos.html">Conócenos</a></li>
                             <li><a class="dropdown-item" href="./contacto.html">Contáctanos</a></li>
                             <li><a class="dropdown-item" href="./formulario_creacion.html">CrearNuevosProductos</a></li>
                           </ul>

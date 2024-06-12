@@ -16,7 +16,7 @@ barraNavegacion.insertAdjacentHTML("beforeend",
                           <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="./catalogo.html">Cátalogo</a>
+                          <a class="nav-link active" aria-current="page" href="./catalogo.html">Catálogo</a>
                         </li>
 
                         <li class="nav-item dropdown" ">
@@ -24,7 +24,7 @@ barraNavegacion.insertAdjacentHTML("beforeend",
                             Más
                           </a>
                           <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./conocenos.html">Conocenos</a></li>
+                            <li><a class="dropdown-item" href="./conocenos.html">Conócenos</a></li>
                             <li><a class="dropdown-item" href="./contacto.html">Contáctanos</a></li>
                             <li><a class="dropdown-item" href="./formulario_creacion.html">CrearNuevosProductos</a></li>
                           </ul>
