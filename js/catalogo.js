@@ -204,7 +204,12 @@ items.forEach(item => addItem(item));
 
 async function nuevaCard(){
   const datos = await JSON.parse(localStorage.getItem("datos"));
-  addItem(datos)
+  if(datos){
+    datos.forEach(element => {
+       addItem(element)
+    });
+  }
+ 
 }
 
 window.addEventListener("load", function(event){
