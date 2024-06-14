@@ -97,11 +97,13 @@ btnCrear.addEventListener("click", function(event){
      console.log(validarPrecio());
 
      if (validarNombre() && validarId(id) && validarDescripcion() && validarPrecio()){
-        let row = `<tr>
+        /* let row = `<tr>
         <td>${nombre.value}</td>
         <td>${descripcion.value}</td>
         <td>${numeroDePiezas.value}</td>
-        <td>${precio.value}</td></tr>`;
+        <td>${precio.value}</td></tr>`; */
+
+
 
         let elemento = `{"id":${id.value},
         "title":"${nombre.value}",
@@ -124,6 +126,15 @@ btnRemove.addEventListener("click", function(event){
     console.log(validarId(idRemove));
     
 });
+
+window.addEventListener("load", function(event){
+    event.preventDefault();
+  
+    if(this.localStorage.getItem("datos")!=null){
+        datos = JSON.parse(localStorage.getItem("datos"));
+    }
+    
+  });
 
 
 /*Cloudinary*/
