@@ -1,0 +1,320 @@
+[33mcommit 28b4c3a236ea57be1529f24e556840b1b05bfdb2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mAaron[m[33m)[m
+Author: Aaron <aaronrosas0409@gmail.com>
+Date:   Mon Jun 10 20:55:14 2024 -0600
+
+    Se modifican detalles de la página del formulario del creación, se agregan placeholders en el campo de descripción y de id del producto
+
+[33mcommit 218c38fde31cbbab11d5c98c13704887c33ad5ea[m[33m ([m[1;31morigin/rubi[m[33m)[m
+Author: RMCA <rubi.metzli@gmail.com>
+Date:   Mon Jun 10 18:52:23 2024 -0600
+
+    Se actualiza el html y css del formulario
+
+[33mcommit 8ae97197b9583af512b099201f19f4ae77921010[m
+Merge: f7b98c1 f04eb31
+Author: RMCA <rubi.metzli@gmail.com>
+Date:   Mon Jun 10 18:45:55 2024 -0600
+
+    Se actualiza el repositorio
+
+[33mcommit f04eb311ce4c8c069707a490ee6d3a927d076738[m[33m ([m[1;31morigin/arely[m[33m)[m
+Author: Arely <arely_apariciosoberanes@gmail.com>
+Date:   Sun Jun 9 15:59:21 2024 -0600
+
+    Se comenzó el desarrollo de codigo para la pagina de inicio y se agregaron imagenes al src
+
+[33mcommit abc94d42500446b05203e25b7d8a534c0d843d70[m
+Author: Andrea <andreaoal98@gmail.com>
+Date:   Fri Jun 7 19:40:34 2024 -0600
+
+    Se agregó menú de barra de navegación con JS a todas las páginas
+
+[33mcommit 9277ad0f9beb0dee726304b0a1b33c4f2f29bc83[m
+Author: Andrea <andreaoal98@gmail.com>
+Date:   Thu Jun 6 16:37:00 2024 -0600
+
+    Se conectaron todas las páginas a la barra de navegación
+
+[33mcommit 77277b7b901aa353fa5607275ef069bcc66542d6[m
+Merge: ac7560a da35547
+Author: Asael <pianochess7@gmail.com>
+Date:   Thu Jun 6 15:49:31 2024 -0600
+
+    Merge branch 'asael' into develop
+
+[33mcommit da35547e60966a688c007ce8913a60563f8a31d8[m
+Author: Asael <pianochess7@gmail.com>
+Date:   Thu Jun 6 15:46:45 2024 -0600
+
+    Se inició página registro
+
+[33mcommit ac7560a309b7b567e239c445996633e720522c32[m
+Merge: 88c9ea3 d65b73b
+Author: Dayis <dayaan.sierrajob@gmail.com>
+Date:   Thu Jun 6 15:40:18 2024 -0600
+
+    Merge branch 'dayaanm' into develop
+
+[33mcommit d65b73b110098cf192f08092e62438a0c3c78d4c[m
+Author: Dayis <dayaan.sierrajob@gmail.com>
+Date:   Thu Jun 6 15:38:32 2024 -0600
+
+    Se añadio catálogo JS y se actualizo CSS
+
+[33mcommit 88c9ea302a7dcca982e71083187662405b8dc22c[m
+Author: angel <uangelra@gmail.com>
+Date:   Thu Jun 6 15:33:01 2024 -0600
+
+    se reparo
+
+[33mcommit a07103a409f52d2fcee130220aa7f9bd8e09be4a[m
+Merge: 8b2671b 88325fc
+Author: angel <uangelra@gmail.com>
+Date:   Thu Jun 6 13:44:08 2024 -0600
+
+    Merge branch 'angel' into develop
+
+[33mcommit 8b2671bdfdcbf204cdc76230c4d8b8636bad45e1[m
+Merge: 3812c7f 6ae3a9d
+Author: Arely <arely_apariciosoberanes@gmail.com>
+Date:   Thu Jun 6 13:39:35 2024 -0600
+
+    Se movió archivo contacto.css a carpeta .css
+
+[33mcommit f7b98c1fbee636b23062cacbc5f08fddf073cf51[m
+Author: RMCA <rubi.metzli@gmail.com>
+Date:   Thu Jun 6 13:36:52 2024 -0600
+
+    Se añadió el css de la barra de navegación y del footer la página de navegación de la página de carrito.html
+
+[33mcommit 88325fc1f3c8d97d0fb0fdca648623c9061b17d2[m[33m ([m[1;31morigin/angel[m[33m)[m
+Merge: b7e2d6d 3812c7f
+Author: angel <uangelra@gmail.com>
+Date:   Thu Jun 6 13:35:48 2024 -0600
+
+    .
+
+[33mcommit 6ae3a9d6180d964fe730107e3d049585e8e18e4c[m
+Author: Arely <arely_apariciosoberanes@gmail.com>
+Date:   Thu Jun 6 13:34:49 2024 -0600
+
+    Agregué la página de pago
+
+[33mcommit 3812c7f20edf22b93d2f9c47e1ecbe121ea9fdb7[m
+Merge: af44435 8c3d64b
+Author: Luisa Sofia Suarez Villanueva <luisasofia.cdhcm@gmail.com>
+Date:   Thu Jun 6 13:22:01 2024 -0600
+
+    Agregué formulario
+
+[33mcommit b7e2d6d0de1c6ef862f7152652262b4b71c3669c[m
+Author: angel <uangelra@gmail.com>
+Date:   Thu Jun 6 13:21:35 2024 -0600
+
+    elimino archivos innecesarios
+
+[33mcommit 8c3d64b2122823987d1c2f6061cfc9c97ddc286d[m
+Author: Luisa Sofia Suarez Villanueva <luisasofia.cdhcm@gmail.com>
+Date:   Thu Jun 6 13:17:19 2024 -0600
+
+    Se creó pagina de formulario_creación
+
+[33mcommit af4443557608d8a3a4989b5529328f117d44dc07[m
+Merge: 1bcd0e9 d559dbe
+Author: RMCA <rubi.metzli@gmail.com>
+Date:   Thu Jun 6 13:12:42 2024 -0600
+
+    Merge branch 'rubi' into develop
+
+[33mcommit 6ea42f15ff3a4ed276d7258a625b21bbb9051b6c[m
+Author: angel <uangelra@gmail.com>
+Date:   Thu Jun 6 13:12:36 2024 -0600
+
+    Se genero archivo js de inicio de sesion
+
+[33mcommit d559dbefd5bf41365d1580d2d7fdbdd62327ddb4[m
+Author: RMCA <rubi.metzli@gmail.com>
+Date:   Thu Jun 6 13:10:12 2024 -0600
+
+    Se añadió html de la página de carrito
+
+[33mcommit dc155e6cd021efb1b8aec02c6e47ec616ad2807b[m
+Author: angel <uangelra@gmail.com>
+Date:   Thu Jun 6 12:53:16 2024 -0600
+
+    Se agrego css y html de inicio de sesion
+
+[33mcommit 81326022c5184849a771885442622b1874299a16[m
+Author: angel <uangelra@gmail.com>
+Date:   Wed Jun 5 23:06:32 2024 -0600
+
+    se elimino archivos de la rama angel
+
+[33mcommit 1bcd0e92629938323af55067513f84d915b828b4[m[33m ([m[1;32mdevelop[m[33m)[m
+Author: Dayis <dayaan.sierrajob@gmail.com>
+Date:   Wed Jun 5 21:44:38 2024 -0600
+
+    Realice la sección de catalogo y las vincule entre las paginas HTML existentes. Tambien se adelantaron las cards de catálogo - productos
+
+[33mcommit 3ddc58580d213ca34dc3ae513b95f67afa31810a[m
+Author: Andrea <andreaoal98@gmail.com>
+Date:   Wed Jun 5 17:19:32 2024 -0600
+
+    Se borra css vacio
+
+[33mcommit 9a73dca80221802ccafff7cf7919cc700a20c3d3[m
+Author: Andrea <andreaoal98@gmail.com>
+Date:   Tue Jun 4 21:19:37 2024 -0600
+
+    Se realizó los cambios necesarios a la barra de navegación
+
+[33mcommit 15c36c9d10649623078c89f5264b16ef3654cef8[m
+Author: Andrea <andreaoal98@gmail.com>
+Date:   Tue Jun 4 21:19:10 2024 -0600
+
+    Se agrego la información del proyecto y los links personales de las cuentas de github y linkedin
+
+[33mcommit 188d34a7219b7c8a7cb08ba805a88f8ea18b190c[m
+Author: Andrea <andreaoal98@gmail.com>
+Date:   Tue Jun 4 21:18:11 2024 -0600
+
+    Se agregó la información al readme
+
+[33mcommit 00101220d0c2ed97b9f33b550f7a4c8cea65336d[m
+Author: Andrea <andreaoal98@gmail.com>
+Date:   Tue Jun 4 19:32:45 2024 -0600
+
+    Se agregaron comentarios a las plantillas para mejor entendimiento
+
+[33mcommit c7c2f02604340d4d1ac115da169d4df27f401f5c[m
+Author: Aaron <aaronrosas0409@gmail.com>
+Date:   Tue Jun 4 17:34:20 2024 -0600
+
+    Se modifica archivo de contacto.js ya que la validación del campo mensaje aceptaba caracteres vacíos, por lo que se arregló este problema
+
+[33mcommit 2ab71b64e8abdf77fa7740c0fc38c9ac004dfc1d[m
+Author: Aaron <aaronrosas0409@gmail.com>
+Date:   Mon Jun 3 19:31:01 2024 -0600
+
+    Se hicieron las validaciones de los campos y se conectó a EmailJS. Queda funcionando EmailJS al 100%
+
+[33mcommit dd0a522453df41f909a0768cc9c18fb0aab4227c[m
+Author: Arely <arely_apariciosoberanes@gmail.com>
+Date:   Mon Jun 3 13:22:40 2024 -0600
+
+    Se creó la hoja de contacto.js. Se trabajó en el formulario especificamente las validaciones
+
+[33mcommit d70b58a0126497d927eebd86dd59a6a9e7c8307c[m
+Author: Arely <arely_apariciosoberanes@gmail.com>
+Date:   Mon Jun 3 10:27:36 2024 -0600
+
+    se solucionó el espacio entre el header y el footer
+
+[33mcommit 2dececbffcbf8771f98a71e375c4a535f14f5f5f[m
+Author: Andrea <andreaoal98@gmail.com>
+Date:   Sat Jun 1 21:00:20 2024 -0600
+
+    Se creó una plantilla con la barra de navegación y el footer listos y linkeado a bootstrap
+
+[33mcommit ed16b1f897140b961019646931d5af7abf02ec60[m
+Author: Andrea <andreaoal98@gmail.com>
+Date:   Sat Jun 1 20:58:57 2024 -0600
+
+    Se agrego el html de la barra de navegación y del footer
+
+[33mcommit 97917b4e840c246278b88eeb3b5c22bd06a082c2[m
+Author: Andrea <andreaoal98@gmail.com>
+Date:   Sat Jun 1 20:57:59 2024 -0600
+
+    Se agrego el formato de la barra de navegación y el footer
+
+[33mcommit 6c52b5bce6f36e064ce5e40465dfb107878d33e1[m
+Author: Andrea <andreaoal98@gmail.com>
+Date:   Sat Jun 1 20:56:51 2024 -0600
+
+    Se agrego el estilo a la página conocenos.css
+
+[33mcommit 06e7cd68db5d31b9090b6bb42a7bd9e5de98f09f[m
+Author: Andrea <andreaoal98@gmail.com>
+Date:   Sat Jun 1 20:55:20 2024 -0600
+
+    Se termino de detallar la página de conocenos
+
+[33mcommit 1139a2cc073445550b3cedda72481c2c0811ecac[m
+Author: Andrea <andreaoal98@gmail.com>
+Date:   Sat Jun 1 20:48:44 2024 -0600
+
+    Se terminó de agregar la barra de navegación
+
+[33mcommit ef26d3fe9a0a58a87a1e01c49b05d06e7c542abd[m
+Author: Andrea <andreaoal98@gmail.com>
+Date:   Sat Jun 1 18:52:54 2024 -0600
+
+    Se volvió a hacer la página de conocenos
+
+[33mcommit 431a427effd076ef4063b053baa66ed3b29ef46f[m
+Author: Andrea <andreaoal98@gmail.com>
+Date:   Sat Jun 1 18:51:44 2024 -0600
+
+    Se agregaron los primeros links de navegación entre página
+
+[33mcommit f0a1b7eefb7f569e1c959523a0a172638503b3cd[m
+Author: Andrea <andreaoal98@gmail.com>
+Date:   Sat Jun 1 18:50:51 2024 -0600
+
+    Se agregaron las fotos personales y el logo
+
+[33mcommit b7df4def853abd2ab576dff1d5cd69cef4e9250e[m
+Merge: 1824ddf c027051
+Author: Dayis <dayaan.sierrajob@gmail.com>
+Date:   Fri May 31 22:28:54 2024 -0600
+
+    Merge branch 'dayaanm' into develop
+
+[33mcommit c027051bab01cae9e9975e369f9d0900546d868a[m
+Author: Dayis <dayaan.sierrajob@gmail.com>
+Date:   Fri May 31 22:26:42 2024 -0600
+
+    Entre Sofi y Dayaan, realizamos la primera fase de contacto
+
+[33mcommit 1824ddf19ae525d7aa72160d31696af09bea5ace[m
+Author: angel <uangelra@gmail.com>
+Date:   Fri May 31 19:07:47 2024 -0600
+
+    se hizo la carpeta y el archivo css contacto
+
+[33mcommit 6aa2810ccac831af34763446a6fe0d09aa39da5d[m
+Author: angel <uangelra@gmail.com>
+Date:   Fri May 31 19:05:11 2024 -0600
+
+    se elimino error
+
+[33mcommit daff71c28ea896bf67d2c752e934092abc098576[m
+Author: angel <uangelra@gmail.com>
+Date:   Fri May 31 19:00:00 2024 -0600
+
+    se creo carpeta css y archivo css de contacto
+
+[33mcommit 13dcc74b04bbbc97b4b776d7f443e3edc652f24e[m
+Author: Dayis <dayaan.sierrajob@gmail.com>
+Date:   Fri May 31 18:40:23 2024 -0600
+
+    Inicializamos el espacio de contacto
+
+[33mcommit 4fe32db381982f6958ef30e91edeadf2aa9de58b[m
+Author: RMCA <rubi.metzli@gmail.com>
+Date:   Wed May 29 19:34:06 2024 -0600
+
+    Se modifico el index.html
+
+[33mcommit e1e2193d196f40f351bcd1f342a597edf4ac63af[m
+Author: Aaron <aaronrosas0409@gmail.com>
+Date:   Wed May 29 19:29:18 2024 -0600
+
+    Se agrega estructura HTML
+
+[33mcommit 776e2c7f5ebc3effa13ac392b7d80582cce3b2d1[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Dayis <dayaan.sierrajob@gmail.com>
+Date:   Wed May 29 18:15:31 2024 -0600
+
+    first commit
