@@ -30,7 +30,7 @@ document.getElementById("upload_widget").addEventListener(
 function showUploadWidget() {
     cloudinary.openUploadWidget({
        cloudName: "<dufshghoz>",
-       uploadPreset: "<bdebeacht>",
+       uploadPreset: "<bdebeach>",
        sources: [
            "local",
            "url",
