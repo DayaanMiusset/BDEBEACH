@@ -59,7 +59,7 @@ function addItem(item){
         "id": 2,
         "title": "Top Bora Bora",
         "price": 650.00 ,
-        "description": "Top con diseno ajustable en la frente ",
+        "description": "Top de diseño ajustable por el frente ",
         "color": ["#FFCBDB", "#FF00FF","#77dde6","#FEF5E7","#F0B27A","#B695C0", "#FF3339","#006341","#FFD700"],
         "image": "./src/topborabora2.jpg",
         // "rating": {
@@ -72,7 +72,7 @@ function addItem(item){
         "id": 3,
         "title": "Top Bahamas",
         "price": 950.00 ,
-        "description": "Top con descote U en la espalda",
+        "description": "Top con escote en forma de U en la espalda",
         "color": ["#000000","#FEF5E7","#454B1B","#A04000"],
         "image": "./src/topbahamas3.jpeg",
         // "rating": {
