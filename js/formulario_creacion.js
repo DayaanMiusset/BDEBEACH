@@ -9,9 +9,10 @@ let idRemove = document.getElementById("idRemove");
 let btnRemove = document.getElementById("btnRemove");
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
-let btnImagen = document.getElementById("btnCrear"); 
+let btnImagen = document.getElementById("btnImagen"); 
 
 let datos = new Array();
+
 
 
 function validarNombre(){
@@ -90,6 +91,7 @@ btnCrear.addEventListener("click", function(event){
     descripcion.style.border="";
     precio.style.border="";
 
+
     isValid = true;
      console.log(validarNombre());
      console.log(validarId(id));
@@ -109,10 +111,11 @@ btnCrear.addEventListener("click", function(event){
         "title":"${nombre.value}",
         "description":"${descripcion.value}",
         "numeroDePiezas":${numeroDePiezas.value},
-        "price":${precio.value},
-        "image":"./src/faldaaruba6_3.JPG"}`;
+        "price":${precio.value}}`;
+
         datos.push(JSON.parse(elemento));
         localStorage.setItem("datos", JSON.stringify(datos));}
+       
 });
 
 btnRemove.addEventListener("click", function(event){
@@ -125,7 +128,8 @@ btnRemove.addEventListener("click", function(event){
     
     console.log(validarId(idRemove));
     
-});
+    
+}, false);
 
 window.addEventListener("load", function(event){
     event.preventDefault();
@@ -136,19 +140,4 @@ window.addEventListener("load", function(event){
     
   });
 
-
-/*Cloudinary*/
-/* var myWidget = cloudinary.createUploadWidget({
-    cloudName: 'dufshghoz', 
-    uploadPreset: 'bdebeach', 
-    }, 
-    (error, result) => {
-        if(!error && result && result.event==="success"){
-            console.log("hecho", result.info);
-        } 
-     });
-
-document.getElementById("upload_widget").addEventListener("click", function(){
-    myWidget.open();
-    }, false); */
         
