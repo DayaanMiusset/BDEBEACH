@@ -16,7 +16,7 @@
       
           <!--TITULO-->
           <div class="titulo">
-              <H1>Formulario_Creación</H1>
+              <H1>Crear producto</H1>
           </div>
       
            <!--BARRA DE NAVEGACIÓN EN EL HEADER TERMINA AQUÍ-->
@@ -63,23 +63,26 @@
         <br>
         
      
- 
-     
-  <div>
-    
-    <img id="imagen"class="rounded mx-auto d-block" style="width: 200px;">
-    
-     <button type="button" id="btnImagen">Subir imagen</button> 
-   <!--EmpiezaCloudinary-->
-  <h3>Elige una imagen</h3>
-  </div>
- 
 
- 
+        <div>
+          <h3>Elige una imagen</h3>
+          <img id="imagen"class="rounded mx-auto d-block" style="width: 200px;"> 
+           <button type="button" id="btnImagen">Subir imagen</button> 
+         <!--EmpiezaCloudinary--> 
+        </div>
+
+        <br>
+
 
     <button type="submit" class="btnCrear" id="btnCrear">Guardar</button> 
           </div>
  </form>
+
+    <div class="alert alert-success fade show" style="display:none;"
+    role="alert" id="alertEnviado">
+    <p id="alertEnviadoTexto"></p>
+    </div>
+
  
  </head>
  </section>

@@ -11,7 +11,11 @@ let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 let btnImagen = document.getElementById("btnImagen"); 
 
+let alertEnviadoTexto = document.getElementById("alertEnviadoTexto");
+let alertEnviado = document.getElementById("alertEnviado");
+
 let datos = new Array();
+let imagenValida =false;
 
 
 
@@ -90,6 +94,7 @@ btnCrear.addEventListener("click", function(event){
     id.style.border="";
     descripcion.style.border="";
     precio.style.border="";
+    btnImagen.style.border="";
 
 
     isValid = true;
@@ -98,24 +103,44 @@ btnCrear.addEventListener("click", function(event){
      console.log(validarDescripcion());
      console.log(validarPrecio());
 
-     if (validarNombre() && validarId(id) && validarDescripcion() && validarPrecio()){
-        /* let row = `<tr>
-        <td>${nombre.value}</td>
-        <td>${descripcion.value}</td>
-        <td>${numeroDePiezas.value}</td>
-        <td>${precio.value}</td></tr>`; */
+     if(!imagenValida){
+        alertValidacionesTexto.innerHTML +="Verifica que <strong>imagen</strong> sea CORRECTA .<br/>";
+        alertValidaciones.style.display="block";
+        alertValidaciones.style.border="solid red medium";
+        btnImagen.focus();
+        btnImagen.style.border="solid red medium";       
+    }else if (imagenValida) {
+        alertValidacionesTexto.innerHTML="";
+        alertValidaciones.style.display="none";
+        alertValidaciones.style.border="";
+        btnImagen.style.border="";       
+    }
 
-
+     if (validarNombre() && validarId(id) && validarDescripcion() && validarPrecio() && imagenValida){
 
         let elemento = `{"id":${id.value},
         "title":"${nombre.value}",
         "description":"${descripcion.value}",
         "numeroDePiezas":${numeroDePiezas.value},
-        "price":${precio.value}}`;
-
+        "price":${precio.value},
+        "image":"${imagen.src}"}`;
         datos.push(JSON.parse(elemento));
-        localStorage.setItem("datos", JSON.stringify(datos));}
-       
+        localStorage.setItem("datos", JSON.stringify(datos));
+
+        id.value="";
+        nombre.value="";
+        descripcion.value="";
+        numeroDePiezas.value="";
+        precio.value="";
+        imagen.src="";
+    
+        alertEnviadoTexto.innerHTML = "El producto ha sido agregado exitosamente.";
+        alertEnviado.style.display = "block"; 
+    }
+
+    
+
+
 });
 
 btnRemove.addEventListener("click", function(event){
@@ -139,5 +164,23 @@ window.addEventListener("load", function(event){
     }
     
   });
+
+
+/*Cloudinary*/
+var myWidget = cloudinary.createUploadWidget({
+    cloudName: 'dufshghoz', 
+    uploadPreset: 'bdebeach', 
+    }, 
+    (error, result) => {
+        if(!error && result && result.event==="success"){
+            console.log("hecho", result.info);
+            imagen.src= result.info.secure_url;
+            imagenValida =true;
+        } 
+     });
+
+btnImagen.addEventListener("click", function(){
+    myWidget.open();
+    }, false); 
 
         
