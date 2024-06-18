@@ -16,7 +16,7 @@
       
           <!--TITULO-->
           <div class="titulo">
-              <H1>Formulario_Creación</H1>
+              <H1>Crear producto</H1>
           </div>
       
            <!--BARRA DE NAVEGACIÓN EN EL HEADER TERMINA AQUÍ-->
@@ -63,24 +63,24 @@
         <br>
         
      
- 
-     <label for="imagen"><strong>Imagen</strong></label>
-    <input type="file" class="form-control" id="imagen"  aria-label="file example" accept=".jpg,.jpeg,.png" required>
-    <br>
+        <div>
+          <h3>Elige una imagen</h3>
+          <img id="imagen"class="rounded mx-auto d-block" style="width: 200px;"> 
+           <button type="button" id="btnImagen">Subir imagen</button> 
+         <!--EmpiezaCloudinary--> 
+        </div>
 
-    <!-- <form class="was-validated" id="fileForm">
-      <div class="mb-3">
-        <input type="file" class="form-control cloudinary-button" id="imagen" aria-label="file example" accept=".jpg,.jpeg,.png" required>
-        <div class="invalid-feedback">Solo podras subir archivos JPG o PNG </div>
-      </div>
-    </form> -->
-  <!--Button Cloudinary-->
-  <!-- <button id="upload_widget" class="cloudinary-button">Upload files</button> -->
- 
+        <br>
 
     <button type="submit" class="btnCrear" id="btnCrear">Guardar</button> 
           </div>
  </form>
+
+    <div class="alert alert-success fade show" style="display:none;"
+    role="alert" id="alertEnviado">
+    <p id="alertEnviadoTexto"></p>
+    </div>
+
  
  </head>
  </section>

@@ -122,7 +122,7 @@ document.getElementById('form')
 
     if(validarNombre() && validarEmail() && validarTelefono() && validarMensaje()){
         const serviceID = 'default_service';
-   const templateID = 'template_61pzqvk';
+        const templateID = 'template_61pzqvk';
 
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
