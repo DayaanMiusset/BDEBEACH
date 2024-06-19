@@ -28,7 +28,7 @@ barraNavegacion.insertAdjacentHTML("beforeend",
                           <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="./conocenos.html">Conócenos</a></li>
                             <li><a class="dropdown-item" href="./contacto.html">Contáctanos</a></li>
-                            <li><a class="dropdown-item" href="./formulario_creacion.html">CrearNuevosProductos</a></li>
+                            <li><a class="dropdown-item" href="./formulario_creacion.html">Crear nuevos productos</a></li>
                           </ul>
                         </li>
                       </ul>
@@ -47,7 +47,7 @@ barraNavegacion.insertAdjacentHTML("beforeend",
                           </a>
                           <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="./IniSesion.html">Iniciar Sesión</a></li>
-                            <li><a class="dropdown-item" href="./registro.html">Registrarte</a></li>
+                            <li><a class="dropdown-item" href="./registro.html">Regístrate</a></li>
                           </ul>
                         </li>  
                         <li class="nav-item ">

@@ -12,13 +12,12 @@
           <!--BARRA DE NAVEGACIÓN EN EL HEADER INICIA AQUÍ-->
         <header id="barraNavegacion">
 
-=======
->>>>>>> db5bb2950794a42d231cf51111c3a12bf332ef80
+
         </header>
       
           <!--TITULO-->
           <div class="titulo">
-              <H1>Formulario de Creación</H1>
+              <H1>Crear producto</H1>
           </div>
       
            <!--BARRA DE NAVEGACIÓN EN EL HEADER TERMINA AQUÍ-->
@@ -61,24 +60,26 @@
         <br>
         
      
- 
-     <label for="imagen"><strong>Imagen</strong></label>
-    <input type="file" class="form-control" id="imagen"  aria-label="file example" accept=".jpg,.jpeg,.png" required>
-    <br>
 
-    <!-- <form class="was-validated" id="fileForm">
-      <div class="mb-3">
-        <input type="file" class="form-control cloudinary-button" id="imagen" aria-label="file example" accept=".jpg,.jpeg,.png" required>
-        <div class="invalid-feedback">Solo podras subir archivos JPG o PNG </div>
-      </div>
-    </form> -->
-  <!--Button Cloudinary-->
-  <!-- <button id="upload_widget" class="cloudinary-button">Upload files</button> -->
+        <div>
+          <h3>Elige una imagen</h3>
+          <img id="imagen"class="rounded mx-auto d-block" style="width: 200px;"> 
+           <button type="button" id="btnImagen">Subir imagen</button> 
+         <!--EmpiezaCloudinary--> 
+        </div>
+
+        <br>
 
 
     <button type="submit" class="btnCrear" id="btnCrear">Guardar</button> 
           </div>
  </form>
+
+    <div class="alert alert-success fade show" style="display:none;"
+    role="alert" id="alertEnviado">
+    <p id="alertEnviadoTexto"></p>
+    </div>
+
  
  </head>
  </section>
@@ -113,5 +114,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./js/formulario_creacion.js"></script>
+
+
+  
 </body>
 </html>
