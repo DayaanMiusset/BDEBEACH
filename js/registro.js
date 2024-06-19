@@ -128,6 +128,14 @@ btnRegistrarse.addEventListener("click", function (event){
                 }
     })
 
+    window.addEventListener("load", function(event){
+        event.preventDefault();
+      
+        if(this.localStorage.getItem("usuarios")!=null){
+            usuarios = JSON.parse(localStorage.getItem("usuarios"));
+        }     
+    });
+
 
 
 
