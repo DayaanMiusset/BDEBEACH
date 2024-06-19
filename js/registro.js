@@ -9,6 +9,8 @@ let confirmarContraseña = document.getElementById("confirmarContraseña");
 let alertEnviadoTexto = document.getElementById("alertEnviadoTexto");
 let alertEnviado = document.getElementById("alertEnviado");
 let usuarios = new Array();
+let ojoPassword = document.getElementById("ojoPassword");
+let ojoPassword2 = document.getElementById("ojoPassword2");
 
 function validarNombre(){
     if (nombre.value.length<3){
@@ -136,6 +138,21 @@ btnRegistrarse.addEventListener("click", function (event){
         }     
     });
 
-
+    ojoPassword.addEventListener("click" , function (event){
+        event.preventDefault();
+        if (contraseña.type == "password") {
+            contraseña.type = "text";
+        } else{
+            contraseña.type = "password";
+        }
+    });
+    ojoPassword2.addEventListener("click" , function (event){
+        event.preventDefault();
+        if (confirmarContraseña.type == "password") {
+            confirmarContraseña.type = "text";
+        } else{
+            confirmarContraseña.type = "password";
+        }
+    });
 
 
