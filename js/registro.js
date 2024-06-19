@@ -1,14 +1,14 @@
 let nombre = document.getElementById("nombre");
 let apellidos = document.getElementById("apellidos");
-let numeroCelular = document.getElementById("numeroCelular");
-let email = document.getElementById("email");
-let direccion = document.getElementById("direccion");
-let municipio = document.getElementById("municipio");
-let estado = document.getElementById("estado");
-let codigoPostal = document.getElementById("codigoPostal");
+let txtEmail = document.getElementById("email");
 let btnRegistrarse = document.getElementById("btnRegistrarse");
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
+let contraseña = document.getElementById("contraseña");
+let confirmarContraseña = document.getElementById("confirmarContraseña");
+let alertEnviadoTexto = document.getElementById("alertEnviadoTexto");
+let alertEnviado = document.getElementById("alertEnviado");
+let usuarios = new Array();
 
 function validarNombre(){
     if (nombre.value.length<3){
@@ -24,7 +24,7 @@ function validarNombre(){
 
 function validarApellidos(){
     if (apellidos.value.length<3){
-        alertValidacionesTexto.innerHTML="Ingresa tu  <strong>apellido</strong> paterno o materno. <br/>";
+        alertValidacionesTexto.innerHTML="Ingresa tu <strong>apellido</strong> paterno o materno. <br/>";
         alertValidaciones.style.display="block";
         alertValidaciones.style.border="solid red medium";
         apellidos.focus();
@@ -32,32 +32,7 @@ function validarApellidos(){
         return false;
     }// if
         return true;
-}//validarNombre
-
-function validarNumeroCelular(){
-    if(numeroCelular.value.length<10 || numeroCelular.value.length>10){
-        alertValidacionesTexto.innerHTML+="- El <strong>teléfono</strong> debe tener al menos 10 caracteres.<br>";
-        alertValidaciones.style.display="block";
-        numeroCelular.style.border="solid red medium";
-        numeroCelular.focus();
-        return false;
-    }
-    if(isNaN(numeroCelular.value)){
-        alertValidacionesTexto.innerHTML+="- El campo <strong>teléfono</strong> sólo puede contener <strong>números</strong>.";
-        alertValidaciones.style.display="block";
-        numeroCelular.style.border="solid red medium";
-        numeroCelular.focus();
-        return false;
-    };
-    if(numeroCelular.value == "0000000000"){
-      alertValidacionesTexto.innerHTML+="- El campo <strong>teléfono</strong> no debe de contener sólo ceros.";
-      alertValidaciones.style.display="block";
-      numeroCelular.style.border="solid red medium";
-      numeroCelular.focus();
-      return false;
-  };
-  return true;
-}
+}//validarApellidos
 
 function errorEmail(){
     alertValidacionesTexto.innerHTML="- Verifica que tu <strong>Email</strong> sea correcto.";
@@ -99,11 +74,60 @@ function validarEmail(){
     return true;
 }
 
-function validarMunicipio(){
-    new RegExp("^[A-Za-z]{5,}$ ");
+function validarContraseña() {
+    let patron = new RegExp("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}$");
+    if(patron.test(contraseña.value)){
+        return true;
+    } else{
+        alertValidacionesTexto.innerHTML+="Contraseña <strong>inválida</strong><br>";
+        alertValidaciones.style.display="block";
+        alertValidaciones.style.border="solid red medium";
+        contraseña.focus();
+        contraseña.style.border="solid red medium";
+    }
 }
 
-function validarCodigoPostal(){
-    new RegExp("^\d{5}$");
+function validarConfirmacion() {
+    if(confirmarContraseña.value==contraseña.value){
+        return true;
+    } else{
+        alertValidacionesTexto.innerHTML+="Las contraseñas no coinciden<br>";
+        alertValidaciones.style.display="block";
+        alertValidaciones.style.border="solid red medium";
+        confirmarContraseña.focus();
+        confirmarContraseña.style.border="solid red medium";
+    }
 }
+
+btnRegistrarse.addEventListener("click", function (event){
+    event.preventDefault();
+    alertValidacionesTexto.innerHTML="";
+        alertValidaciones.style.display="none";
+        alertValidaciones.style.border="";
+        confirmarContraseña.style.border="";
+        contraseña.style.border="";
+        nombre.style.border="";
+        apellidos.style.border="";
+        txtEmail.style.border="";
+        if (validarNombre() && validarApellidos() && validarEmail() && validarContraseña()&& validarConfirmacion()){
+            let elemento = `{"nombre":"${nombre.value}",
+                    "apellidos":"${apellidos.value}",
+                    "email":"${txtEmail.value}",
+                    "contraseña":"${contraseña.value}"}`;                    
+                    usuarios.push(JSON.parse(elemento));
+                    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+                    confirmarContraseña.value="";
+                    contraseña.value="";
+                    nombre.value="";
+                    apellidos.value="";
+                    txtEmail.value="";
+
+                    alertEnviadoTexto.innerHTML = "El registro ha sido exitoso.";
+                    alertEnviado.style.display = "block";
+                }
+    })
+
+
+
 
