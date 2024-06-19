@@ -22,7 +22,7 @@
       
           <!--TITULO-->
           <div class="titulo">
-              <H1>REGISTRATE</H1>
+              
           </div>
       
            <!--BARRA DE NAVEGACIÓN EN EL HEADER TERMINA AQUÍ-->
@@ -36,7 +36,10 @@
     <!-- ESCRIBIR CONTENIDO  -->
 
     <main class="container ">
-               
+              <div class="alert alert-danger fade show" style="display:none;"
+                 role="alert" id="alertValidaciones">
+                 <p id="alertValidacionesTexto"></p>
+              </div>
               <div class="card mb-3" style="max-width: 768px;">
                 <div class="row g-0">
                   <div class="col-md-4">
@@ -44,44 +47,42 @@
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title"><strong>REGISTRATE</strong></h5><br>
+                      <h5 class="card-title"><strong>REGÍSTRATE</strong></h5><br>
                       <div class="mb-3">
-                        <label for="formGroupExampleInput" class="form-label"><strong>Nombre</strong></label>
+                        <label for="formGroupExampleInput" class="form-label" id="nombre"><strong>Nombre</strong></label>
                         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ejemplo: Andrea">
                       </div>
                       <div class="mb-3">
-                        <label for="formGroupExampleInput2" class="form-label"><strong>Apellidos</strong></label>
+                        <label for="formGroupExampleInput2" class="form-label" id="apellidos"><strong>Apellidos</strong></label>
                         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ejemplo: López Hernández">
                       </div>
                       <div class="mb-3">
-                        <label for="formGroupExampleInput2" class="form-label"><strong>Número de celular</strong></label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="10 dígitos requeridos">
+                        <label for="formGroupExampleInput2" class="form-label" id="numeroCelular"><strong>Número de celular</strong></label>
+                        <input type="tel" class="form-control" id="formGroupExampleInput2" placeholder="10 dígitos requeridos" maxlength="10" title="Debe contener 10 dígitos numéricos.">
                       </div>
                       <form class="row g-3">
                         <div class="col-12">
-                          <label for="inputEmail4" class="form-label"><strong>Email</strong></label>
+                          <label for="inputEmail4" class="form-label" id="email"><strong>Email</strong></label>
                           <input type="email" class="form-control" id="inputEmail4" placeholder="usuario@dominio.com">
                         </div>
                         <div class="col-12">
-                          <label for="inputAddress" class="form-label"><strong>Dirección</strong></label>
+                          <label for="inputAddress" class="form-label" id="direccion"><strong>Dirección</strong></label>
                           <input type="text" class="form-control" id="inputAddress" placeholder="Calle | Número | Colonia">
                         </div>
                         <div class="col-md-6">
-                          <label for="inputCity" class="form-label"><strong>Municipio|Delegación</strong></label>
+                          <label for="inputCity" class="form-label" id="municipio"><strong>Municipio|Alcaldía</strong></label>
                           <input type="text" class="form-control" id="inputCity">
                         </div>
                         <div class="col-md-6">
-                          <label for="inputState" class="form-label"><strong>Estado</strong></label>
+                          <label for="inputState" class="form-label" id="estado"><strong>Estado</strong></label>
                           <select id="inputState" class="form-select">
                             <option selected style="font-style: oblique;">Selecciona un Estado</option>
                             <option>Ciudad de México</option>
                             <option>Estado de México</option>
-                            <option>Monterrey</option>
-                            <option>Jalisco</option>
                           </select><br>
                           <div class="col-12">
-                            <label for="inputAddress" class="form-label"><strong>Código Postal</strong></label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="12345">
+                            <label for="inputAddress" class="form-label" id="codigoPostal"><strong>Código Postal</strong></label>
+                            <input type="tel" class="form-control" id="inputAddress" placeholder="12345" maxlength="5" title="Debe contener 5 dígitos numéricos.">
                           </div>
                         </div>
                         <div class="col-12">
