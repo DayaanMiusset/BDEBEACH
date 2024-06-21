@@ -77,7 +77,7 @@ function validarEmail(){
 }
 
 function validarContraseña() {
-    let patron = new RegExp("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}$");
+    let patron = new RegExp("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}$");
     if(patron.test(contraseña.value)){
         return true;
     } else{
@@ -125,9 +125,12 @@ btnRegistrarse.addEventListener("click", function (event){
                     apellidos.value="";
                     txtEmail.value="";
 
-                    alertEnviadoTexto.innerHTML = "El registro ha sido exitoso.";
+                    alertEnviadoTexto.innerHTML = "El registro ha sido exitoso. <br> <strong>Ya puedes inicar sesión.</strong>";
                     alertEnviado.style.display = "block";
                 }
+                setTimeout(function(){
+                    window.location.href = "./iniSesion.html";
+                },2000);
     })
 
     window.addEventListener("load", function(event){
