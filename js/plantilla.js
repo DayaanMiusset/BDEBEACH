@@ -39,7 +39,7 @@ barraNavegacion.insertAdjacentHTML("beforeend",
                         </svg></button>
                       </form>
                       <ul class="navbar-nav p-2 my-2 my-lg-0 navbar-nav-scroll " id="listaMenu" style="--bs-scroll-height: 100px;">
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown" id="sesion">
                           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                               <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
@@ -48,6 +48,17 @@ barraNavegacion.insertAdjacentHTML("beforeend",
                           <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="./IniSesion.html">Iniciar Sesión</a></li>
                             <li><a class="dropdown-item" href="./registro.html">Regístrate</a></li>
+                          </ul>
+                        </li>  
+                        <li class="nav-item dropdown" style="display:none" id="icono">
+                          <a class="nav-link dropdown-toggle" href="#" id="usuario" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                            </svg>
+                          </a>
+                          <ul class="dropdown-menu" >
+                            <li><a class="dropdown-item" href="./iniSesion.html" id="cerrar"  role="button" >Cerrar Sesión</a></li>
+                        
                           </ul>
                         </li>  
                         <li class="nav-item ">
@@ -93,3 +104,29 @@ footer.insertAdjacentHTML("beforeend",
   </ul>
   <p class="text-center text-body-light footer-p">B de Beach   |   Marca registrada &#169  |   2024</p>`
 )
+let usuario=document.getElementById("usuario");
+let icono=document.getElementById("icono");
+let sesion=document.getElementById("sesion");
+let cerrar=document.getElementById("cerrar");
+
+window.addEventListener("load", function(event){
+  event.preventDefault();
+  if(this.localStorage.getItem("usuarioActual")!=null){
+    usuarioActual=JSON.parse (localStorage.getItem("usuarioActual"));
+    sesion.style.display="none";
+    usuario.innerHTML+=usuarioActual.nombre;
+    icono.style.display="block";
+  }
+
+  })
+
+cerrar.addEventListener("click", function(event){
+  event.preventDefault();
+  sesion.style.display="block";
+  icono.style.display="none";
+  localStorage.removeItem("usuarioActual");
+
+  setTimeout(function(){
+    window.location.href = "./iniSesion.html";
+},100);
+})

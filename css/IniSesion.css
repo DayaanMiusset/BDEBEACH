@@ -54,7 +54,7 @@ main {
 .contact-form-container button {
     width: 100%;
     padding: 10px;
-    background-color: #8ea72892;
+    background-color: #a98c70;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -64,6 +64,11 @@ main {
 
 .contact-form-container button:hover {
     background-color: #2188377d;
+}
+
+#button{
+    background-color: #a98c70; 
+    color:white;
 }
 
 
