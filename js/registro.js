@@ -119,6 +119,9 @@ btnRegistrarse.addEventListener("click", function (event){
                     usuarios.push(JSON.parse(elemento));
                     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
+                    let nuevoElemento = `{"nombre" : "${nombre.value}", "email" : "${txtEmail}"}`;
+                    localStorage.setItem("usuarioActual", nuevoElemento);
+
                     confirmarContraseña.value="";
                     contraseña.value="";
                     nombre.value="";
@@ -127,10 +130,12 @@ btnRegistrarse.addEventListener("click", function (event){
 
                     alertEnviadoTexto.innerHTML = "El registro ha sido exitoso. <br> <strong>Ya puedes inicar sesión.</strong>";
                     alertEnviado.style.display = "block";
+                    
+                    setTimeout(function(){
+                        window.location.href = "./index.html";
+                    },2000);
                 }
-                setTimeout(function(){
-                    window.location.href = "./iniSesion.html";
-                },2000);
+                
     })
 
     window.addEventListener("load", function(event){

@@ -7,7 +7,6 @@
 }
 .titulo{
     margin-top: 6rem;
-    font-family: literata;
     margin-left: 3rem;
     margin-right: 3rem;
 }
@@ -16,6 +15,9 @@
 /*FORMATO DEL HEADER NAVEGADOR FINALIZA*/
 
 /*FORMATO DEL CONTENIDO INICIA*/
+#btnRegistrarse{
+    background-color: #A98C70;
+}
 
  
 /*FORMATO DEL CONTENIDO TERMINA*/

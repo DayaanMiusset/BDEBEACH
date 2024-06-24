@@ -1,12 +1,13 @@
 /* FORMATO DE LAS CARDS */
 .card{
-    background-color: #DCB780;
+    
     margin: 10px;
     margin-left: 3rem;
     margin-right: 3rem;
     border-radius: 1.5rem;
     opacity: 0.9;
     transition: 0.5s ease;
+    border: solid rgb(183, 180, 180) 5px;
 }
 
 .card:hover{
@@ -22,6 +23,7 @@
     background-color: white;
     margin: 10px;
     border-radius: 1rem;
+    
 }
 
 .img-fluid{
@@ -43,8 +45,8 @@
 }
 
 .btn{
-    background-color: #DCB780;
-    border-color: #DCB780;
+    background-color: #A98C70;
+    border-color: #A98C70;
 }
 .col btn:hover{
     width: 50px;
@@ -52,7 +54,7 @@
 }
 
 .titulo2{
-    font-family: literata;
+    
     margin-left: 3rem;
     margin-right: 3rem;
 }
@@ -67,7 +69,6 @@
 }
 .titulo{
     margin-top: 6rem;
-    font-family: literata;
     margin-left: 3rem;
     margin-right: 3rem;
 }
@@ -77,9 +78,10 @@
     object-fit: cover;
 }
 .navbarbtn{
-    background-color: #DCB780;
-    border-color: #DCB780;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
 }
+
 
 
 /*FORMATO DEL HEADER NAVEGADOR FINALIZA*/
