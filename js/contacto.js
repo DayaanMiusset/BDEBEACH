@@ -4,15 +4,10 @@ let txtEmail = document.getElementById("email");
 let txtTelefono = document.getElementById("telefono");
 let txtMensaje = document.getElementById("mensaje");
 
-
-
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 let alertEnviadoTexto = document.getElementById("alertEnviadoTexto");
 let alertEnviado = document.getElementById("alertEnviado");
-
-
-
 
 let isValid = true;
 
@@ -29,7 +24,7 @@ function validarNombre(){
 }
 
 function validarTelefono(){
-    if(txtTelefono.value.length<10 || txtTelefono.value.length>10){
+    /* if(txtTelefono.value.length<10 || txtTelefono.value.length>10){
         alertValidacionesTexto.innerHTML+="- El <strong>Télefono</strong> debe tener al menos 10 caracteres.<br>";
         alertValidaciones.style.display="block";
         txtTelefono.style.border="solid red medium";
@@ -43,15 +38,25 @@ function validarTelefono(){
         txtTelefono.focus();
         return false;
     };
-    if(txtTelefono.value == "0000000000"){
+    if(txtTelefono.value == "000000000"){
       alertValidacionesTexto.innerHTML+="- El campo <strong>Télefono</strong> no debe de contener sólo ceros.";
       alertValidaciones.style.display="block";
       txtTelefono.style.border="solid red medium";
       txtTelefono.focus();
 
       return false;
-  };
-  return true;
+  }; */
+  const patron = new RegExp ("^[2-7]\d{9}$");
+  if (patron.test(txtTelefono.value)) {
+    return true;
+  } else {
+    alertValidacionesTexto.innerHTML+="- El campo <strong>Télefono</strong> no debe de contener sólo ceros.";
+      alertValidaciones.style.display="block";
+      txtTelefono.style.border="solid red medium";
+      txtTelefono.focus();
+    return false;
+  }
+  
 }
 
 function validarMensaje(){
