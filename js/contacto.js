@@ -24,29 +24,8 @@ function validarNombre(){
 }
 
 function validarTelefono(){
-    /* if(txtTelefono.value.length<10 || txtTelefono.value.length>10){
-        alertValidacionesTexto.innerHTML+="- El <strong>Télefono</strong> debe tener al menos 10 caracteres.<br>";
-        alertValidaciones.style.display="block";
-        txtTelefono.style.border="solid red medium";
-        txtTelefono.focus();
-        return false;
-    }
-    if(isNaN(txtTelefono.value)){
-        alertValidacionesTexto.innerHTML+="- El campo <strong>Télefono</strong> solo puede contener <strong>números</strong>.";
-        alertValidaciones.style.display="block";
-        txtTelefono.style.border="solid red medium";
-        txtTelefono.focus();
-        return false;
-    };
-    if(txtTelefono.value == "000000000"){
-      alertValidacionesTexto.innerHTML+="- El campo <strong>Télefono</strong> no debe de contener sólo ceros.";
-      alertValidaciones.style.display="block";
-      txtTelefono.style.border="solid red medium";
-      txtTelefono.focus();
-
-      return false;
-  }; */
-  const patron = new RegExp ("^[2-7]\d{9}$");
+  
+  const patron = new RegExp ("^[1-9][0-9]{9}$");
   if (patron.test(txtTelefono.value)) {
     return true;
   } else {
