@@ -163,7 +163,7 @@ window.addEventListener("load", function(event){
         datos = JSON.parse(localStorage.getItem("datos"));
     }
     
-});
+  });
 
 
 /*Cloudinary*/
@@ -183,4 +183,4 @@ btnImagen.addEventListener("click", function(){
     myWidget.open();
     }, false); 
 
-        
+     
