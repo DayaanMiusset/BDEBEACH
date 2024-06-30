@@ -97,6 +97,14 @@ main {
     cursor: pointer;
     font-size: 16px;
 }
+ 
+/*FORMATO PARA HACER RESPONSIVA LA PÁGINA*/
+@media (max-width: 425px) {
+    .form-group {
+        width: 300px;
+    }
+}
+
 /*FORMATO DEL CONTENDIO FINALIZA*/
 /*FORMATO DEL FOOTER*/
 .footer{
