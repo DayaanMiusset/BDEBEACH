@@ -38,18 +38,18 @@
 
   <!-- ESCRIBIR CONTENIDO  -->
 
-  <main class="container ">
+  <!-- <main class="container ">
     <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
       <p id="alertValidacionesTexto"></p>
     </div>
     <div class="card mb-3" style="max-width: 768px;">
       <div class="row g-0">
-        <!--  <div class="col-md-6">
+         <div class="col-md-6">
                     <img src="./src/faldaaruba6_3.JPG" height="768px" width="500px" class="img-fluid rounded-start" alt="...">
                   </div> -->
-        <div class="col-md-8">
+        <!-- <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title"><strong>REGÍSTRATE</strong></h5><br>
+            <h2 class="card-title"><strong>REGÍSTRATE</strong></h2><br>
             <div class="mb-3">
               <label for="formGroupExampleInput" class="form-label"><strong>Nombre</strong></label>
               <input type="text" class="form-control" id="nombre" placeholder="Ejemplo: Andrea">
@@ -105,7 +105,72 @@
         </div>
       </div>
     </div>
-  </main>
+  </main>-->
+  <main>
+    <div></div>
+    <div class="contact-form-container">
+        <h2>Regístrate</h2>
+        <div class="alert alert-danger fade show" style="display:none;"
+                                         role="alert" id="alertValidaciones">
+           <p id="alertValidacionesTexto"></p>
+     </div>
+     <form id="form">
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre" placeholder="Ejemplo: Andrea">
+        </div>
+        <div class="field">
+          <label for="nombre">Apellidos</label>
+          <input type="text" name="apellidos" id="apellidos" placeholder="Ejemplo: López Hernández">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="usuario@dominio.com">
+        </div>
+        <div class="field">
+          <label for="contraseña">Contraseña</label>
+          <input type="password" name="contraseña" id="contraseña" placeholder="Escribe tu contraseña">
+        <svg xmlns="http://www.w3.org/2000/svg" id="ojoPassword" width="16" height="16" fill="currentColor"
+                  class="bi bi-eye" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
+                  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+        </svg> <br>
+        <span id="passwordHelpInline" class="form-text">
+          La contraseña debe contener mínimo 8 caracteres, una letra mayúscula, una letra minúscula y algún
+          número.
+        </span>
+        </div><br>
+    
+        <div class="field">
+          <label for="contraseña">Confirmar Contraseña</label>
+          <input type="password" name="contraseña" id="confirmarContraseña" placeholder="Confirma tu contraseña">
+          <svg xmlns="http://www.w3.org/2000/svg" id="ojoPassword2" width="16" height="16" fill="currentColor"
+          class="bi bi-eye" viewBox="0 0 16 16">
+          <path
+            d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
+          <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+        </svg> 
+        </div>
+        <br>
+
+        <button type="submit" class="registrarse" id="btnRegistrarse">Registrarme</button>
+        
+      </form>
+      <div class="alert alert-success fade show" style="display:none;"
+                                         role="alert" id="alertEnviado">
+           <p id="alertEnviadoTexto"></p>
+     </div>
+      
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      
+      <script type="text/javascript">
+        emailjs.init('T40EwMdL5LsDqwcCG')
+      </script>
+    </div>
+  </div>
+</main>
   <!--TERMINA CONTENIDO DE LA PÁGINA-->
 
 

@@ -10,6 +10,8 @@ let btnRemove = document.getElementById("btnRemove");
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 let btnImagen = document.getElementById("btnImagen"); 
+let tallas= document.querySelectorAll("input[name=talla]");
+let colores= document.querySelectorAll("input[name=color]");
 
 let alertEnviadoTexto = document.getElementById("alertEnviadoTexto");
 let alertEnviado = document.getElementById("alertEnviado");
@@ -50,6 +52,23 @@ function validarId (ID){
     }//if
 }
 
+function validarTallas(){
+    tallas.forEach((e)=>{
+        if(e.checked == true){
+            return true; 
+        }else{
+            alertValidacionesTexto.innerHTML +="Elige alguna talla. <br/>";
+            alertValidaciones.style.display="block";
+            alertValidaciones.style.border="solid red medium";
+            tallas.focus();
+            tallas.style.border="solid red medium";
+            return false;
+            
+   
+    }});
+
+}
+
 function validarDescripcion (){
     let patronDesc = new RegExp("^.{10,60}$");
 
@@ -66,8 +85,9 @@ function validarDescripcion (){
         descripcion.focus();
         descripcion.style.border="solid red medium";
         return false;
+   
     }//if
-}//validarDescripcion
+}
 
 function validarPrecio(){
     let patronPrecio = new RegExp("^[0-9]{1,4}(\.[0-9]{1,2})?$");
@@ -92,6 +112,7 @@ btnCrear.addEventListener("click", function(event){
     alertValidaciones.style.border="";
     nombre.style.border="";
     id.style.border="";
+    tallas.innerHTML="";
     descripcion.style.border="";
     precio.style.border="";
     btnImagen.style.border="";
@@ -102,7 +123,10 @@ btnCrear.addEventListener("click", function(event){
      console.log(validarId(id));
      console.log(validarDescripcion());
      console.log(validarPrecio());
-
+     console.log(validarTallas(id));
+     
+     
+    
      if(!imagenValida){
         alertValidacionesTexto.innerHTML +="Verifica que <strong>imagen</strong> sea CORRECTA .<br/>";
         alertValidaciones.style.display="block";
@@ -121,6 +145,7 @@ btnCrear.addEventListener("click", function(event){
         let elemento = `{"id":${id.value},
         "title":"${nombre.value}",
         "description":"${descripcion.value}",
+        
         "numeroDePiezas":${numeroDePiezas.value},
         "price":${precio.value},
         "image":"${imagen.src}"}`;
