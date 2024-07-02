@@ -10,7 +10,7 @@ function addItem(item){
     <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."  style ="background-color: ${color}">
     `
   }); 
- 
+
   const itemsContainer = document.getElementById("list-items");
   itemsContainer.insertAdjacentHTML ("beforeend", 
     `<div class="col-md-4" id="id${item.id}">
@@ -60,7 +60,7 @@ function addItem(item){
         "title": "Top Bora Bora",
         "price": 650.00 ,
         "description": "Top de diseño ajustable por el frente ",
-        "color": "#FFCBDB, #FF00FF,#77dde6,#FEF5E7,#F0B27A,#B695C0, #FF3339,#006341,#D9AD26",
+        "color": "#FFCBDB,#FF00FF,#77dde6,#FEF5E7,#F0B27A,#B695C0,#FF3339,#006341,#D9AD26",
         "image": "./src/topborabora2.jpg",
         // "rating": {
         //     "rate": 3.9,
@@ -154,7 +154,7 @@ function addItem(item){
         "title": "Set Rio",
         "price": 1000.00 ,
         "description": "El set incluye 2 piezas: TOP Y BOTTOMS",
-        "color": "#FFCBDB, #FF00FF,#77dde6,#FEF5E7,#F0B27A,#B695C0, #FF3339,#006341,#D9AD26",
+        "color": "#FFCBDB, #FF00FF,#77dde6,#FEF5E7,#F0B27A,#B695C0,#FF3339,#006341,#D9AD26",
         "image": "./src/bikinisetrio10.jpg",
                 // "rating": {
                 //     "rate": 3.9,
@@ -166,7 +166,7 @@ function addItem(item){
         "title": "Set Bora Bora",
         "price": 1200.00 ,
         "description": "El set incluye 2 piezas: TOP Y BOTTOMS",
-        "color": "#FFCBDB, #FF00FF,#77dde6,#FEF5E7,#F0B27A,#B695C0, #FF3339,#006341,#D9AD26",
+        "color": "#FFCBDB, #FF00FF,#77dde6,#FEF5E7,#F0B27A,#B695C0,#FF3339,#006341,#D9AD26",
         "image": "./src/bikinisetborabora11.jpg",
                 // "rating": {
                 //     "rate": 3.9,
