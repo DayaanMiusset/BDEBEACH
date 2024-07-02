@@ -1,7 +1,7 @@
 
 
 function addItem(item){
-  let tonos = item.color;
+  let tonos=item.color.split(",");
   console.log(tonos);
   let coloresHTML="";
 
@@ -48,7 +48,7 @@ function addItem(item){
         "title": "Top Mykonos",
         "price": 750.00 ,
         "description": "Top estilo bikini ajuble con tiras en la espalda y cuello",
-        "color": ["#000000","#D9AD26"],
+        "color": "#000000,#D9AD26",
         "image": "./src/topmykonos1.jpg",
         // "rating": {
         //     "rate": 3.9,
@@ -62,7 +62,7 @@ function addItem(item){
         "price": 650.00 ,
         "description": "Top de diseño ajustable por el frente ",
 
-        "color": ["#FFCBDB", "#FF00FF","#77dde6","#FEF5E7","#F0B27A","#B695C0", "#FF3339","#006341","#D9AD26"],
+        "color": "#FFCBDB, #FF00FF,#77dde6,#FEF5E7,#F0B27A,#B695C0, #FF3339,#006341,#D9AD26",
 
         "image": "./src/topborabora2.jpg",
         // "rating": {
@@ -76,7 +76,7 @@ function addItem(item){
         "title": "Top Bahamas",
         "price": 950.00 ,
         "description": "Top con escote en forma de U en la espalda",
-        "color": ["#000000","#FEF5E7","#454B1B","#A04000"],
+        "color": "#000000,#FEF5E7,#454B1B,#A04000",
         "image": "./src/topbahamas3.jpeg",
         // "rating": {
         //     "rate": 3.9,
@@ -90,7 +90,7 @@ function addItem(item){
         "title": "Falda Saint-Tropez",
         "price": 1450.00 ,
         "description": "Falda estilo sirena midi",
-        "color": ["#000000","#D9AD26"],
+        "color": "#000000,#D9AD26",
         "image": "./src/faldasainttropez4.jpg",
         // "rating": {
         //     "rate": 3.9,
@@ -103,7 +103,7 @@ function addItem(item){
         "title": "Mini Falda Saint Tropez",
         "price": 990.00,
         "description": "Falda estilo sirena corta",
-        "color": ["#A04000","#FEF5E7","#f9e79f","#efac87","#f0b27a "],
+        "color": "#A04000,#FEF5E7,#f9e79f,#efac87,#f0b27a",
         "image": "./src/minifaldasainttropez5.jpg",
             // "rating": {
             //     "rate": 3.9,
@@ -116,7 +116,7 @@ function addItem(item){
         "title": "Falda Aruba",
         "price": 1100.00 ,
         "description": "Mini falda con ajuste en la cintura",
-        "color":  ["#000000","#FEF5E7","#454B1B","#A04000"],
+        "color":  "#000000,#FEF5E7,#454B1B,#A04000",
         "image": "./src/faldaaruba6.jpg",
                 // "rating": {
                 //     "rate": 3.9,
@@ -157,7 +157,7 @@ function addItem(item){
         "title": "Set Rio",
         "price": 1000.00 ,
         "description": "El set incluye 2 piezas: TOP Y BOTTOMS",
-        "color": ["#FFCBDB", "#FF00FF","#77dde6","#FEF5E7","#F0B27A","#B695C0", "#FF3339","#006341","#D9AD26"],
+        "color": "#FFCBDB, #FF00FF,#77dde6,#FEF5E7,#F0B27A,#B695C0, #FF3339,#006341,#D9AD26",
         "image": "./src/bikinisetrio10.jpg",
                 // "rating": {
                 //     "rate": 3.9,
@@ -169,7 +169,7 @@ function addItem(item){
         "title": "Set Bora Bora",
         "price": 1200.00 ,
         "description": "El set incluye 2 piezas: TOP Y BOTTOMS",
-        "color": ["#FFCBDB", "#FF00FF","#77dde6","#FEF5E7","#F0B27A","#B695C0", "#FF3339","#006341","#D9AD26"],
+        "color": "#FFCBDB, #FF00FF,#77dde6,#FEF5E7,#F0B27A,#B695C0, #FF3339,#006341,#D9AD26",
         "image": "./src/bikinisetborabora11.jpg",
                 // "rating": {
                 //     "rate": 3.9,
@@ -182,7 +182,7 @@ function addItem(item){
         "title": "Set Bikini Hellow Kitty",
         "price": 2590.00,
         "description": "El set incluye 3 piezas: TOP, BOTTOMS y PAREO",
-        "color": ["#FFFFFF"],
+        "color": "#FFFFFF",
         "image": "./src/bikinisethellokitty12.jpg",
                 // "rating": {
                 //     "rate": 3.9,
@@ -194,7 +194,7 @@ function addItem(item){
           "title": "Conjunto Bora Bora",
           "price": 1640.00,
           "description": "El conjunto incluye 2 piezas: TOP Y FALDA MIDI con ajuste lateral",
-          "color": ["#D9AD26","#000000","#FFFFFF"],
+          "color": "#D9AD26,#000000,#FFFFFF",
           "image": "./src/conjuntoborabora8.jpg",
                   // "rating": {
                   //     "rate": 3.9,

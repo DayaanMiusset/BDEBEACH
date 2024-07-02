@@ -10,13 +10,19 @@ let btnRemove = document.getElementById("btnRemove");
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 let btnImagen = document.getElementById("btnImagen"); 
-let tallas= document.querySelectorAll("input[name=talla]");
-let colores= document.querySelectorAll("input[name=color]");
+let tallaS=document.getElementById("tallaS");
+let tallas=document.querySelectorAll(".talla");
+let colorN=document.getElementById("#000000");
+let colores=document.querySelectorAll(".colores");
+
+
 
 let alertEnviadoTexto = document.getElementById("alertEnviadoTexto");
 let alertEnviado = document.getElementById("alertEnviado");
 
 let datos = new Array();
+let arrTallas= new Array();
+let arrColores= new Array();
 let imagenValida =false;
 
 
@@ -53,20 +59,49 @@ function validarId (ID){
 }
 
 function validarTallas(){
+    console.log(tallas.length);
+
     tallas.forEach((e)=>{
-        if(e.checked == true){
-            return true; 
-        }else{
-            alertValidacionesTexto.innerHTML +="Elige alguna talla. <br/>";
-            alertValidaciones.style.display="block";
-            alertValidaciones.style.border="solid red medium";
-            tallas.focus();
-            tallas.style.border="solid red medium";
-            return false;
+        if(e.checked){
+            arrTallas.push(e.value);
+          
+        }
+        });
+
+    if(arrTallas.length==0){
+        alertValidacionesTexto.innerHTML +="Elige alguna talla. <br/>";
+        alertValidaciones.style.display="block";
+        alertValidaciones.style.border="solid red medium";
+        tallaS.focus();
+        tallaS.style.border="solid red medium";
+        return false;
             
    
-    }});
-
+    }else{
+        return true;
+    }
+}
+function validarColores(){
+    
+    colores.forEach((e)=>{
+        if(e.checked){
+            arrColores.push(e.value);
+            
+        }
+        });
+      coloresString+=`]`;
+    if(arrColores.length==0){
+        alertValidacionesTexto.innerHTML +="Elige algún color. <br/>";
+        alertValidaciones.style.display="block";
+        alertValidaciones.style.border="solid red medium";
+        colorN.focus();
+        colorN.style.border="solid red medium";
+        return false;
+            
+   
+    }else{
+        return true;
+    }
 }
 
 function validarDescripcion (){
@@ -112,18 +147,14 @@ btnCrear.addEventListener("click", function(event){
     alertValidaciones.style.border="";
     nombre.style.border="";
     id.style.border="";
-    tallas.innerHTML="";
+    tallaS.style.border="";
     descripcion.style.border="";
     precio.style.border="";
     btnImagen.style.border="";
-
+    colorN.style.border="";
+    
 
     isValid = true;
-     console.log(validarNombre());
-     console.log(validarId(id));
-     console.log(validarDescripcion());
-     console.log(validarPrecio());
-     console.log(validarTallas(id));
      
      
     
@@ -140,24 +171,27 @@ btnCrear.addEventListener("click", function(event){
         btnImagen.style.border="";       
     }
 
-     if (validarNombre() && validarId(id) && validarDescripcion() && validarPrecio() && imagenValida){
+     if (validarNombre() && validarId(id) && validarDescripcion() && validarPrecio() && imagenValida && validarTallas() && validarColores() ){
 
-        let elemento = `{"id":${id.value},
+        
+        let elemento = `{"id":"${id.value}",
         "title":"${nombre.value}",
         "description":"${descripcion.value}",
-        
-        "numeroDePiezas":${numeroDePiezas.value},
+        "tallas":"${arrTallas}",
+        "color":"${arrColores}",
         "price":${precio.value},
         "image":"${imagen.src}"}`;
         datos.push(JSON.parse(elemento));
+        console.log(datos);
         localStorage.setItem("datos", JSON.stringify(datos));
 
         id.value="";
         nombre.value="";
         descripcion.value="";
-        numeroDePiezas.value="";
         precio.value="";
         imagen.src="";
+        arrTallas=[];
+        arrColores=[];
     
         alertEnviadoTexto.innerHTML = "El producto ha sido agregado exitosamente.";
         alertEnviado.style.display = "block"; 
