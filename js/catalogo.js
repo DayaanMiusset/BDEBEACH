@@ -1,7 +1,7 @@
 
 
 function addItem(item){
-  /* let tonos = item.color;
+  let tonos = item.color;
   console.log(tonos);
   let coloresHTML="";
 
@@ -9,7 +9,7 @@ function addItem(item){
     coloresHTML += `
     <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."  style ="background-color: ${color}">
     `
-  }); */
+  });
  
   const itemsContainer = document.getElementById("list-items");
   itemsContainer.insertAdjacentHTML ("beforeend", 
@@ -22,12 +22,12 @@ function addItem(item){
          <small class="card-text">${item.description}</small>
           <br><br>
         <div class="colores">
-
+            ${coloresHTML}
         </div>
           <div class="d-flex ms-auto">
            <small class="price" >$${item.price} MXN</small>
            </div>
-         
+
           <br><br>
           <div class="btn-group">
             <button type="button" class="btn btn-sm btn-outline-secondary"> Agregar al carrito </button>
@@ -61,6 +61,7 @@ function addItem(item){
         "price": 650.00 ,
         "description": "Top de diseño ajustable por el frente ",
         "color": ["#FFCBDB", "#FF00FF","#77dde6","#FEF5E7","#F0B27A","#B695C0", "#FF3339","#006341","#FFD700"],
+        "tallas": [S, M, L, Unitalla],
         "image": "./src/topborabora2.jpg",
         // "rating": {
         //     "rate": 3.9,
