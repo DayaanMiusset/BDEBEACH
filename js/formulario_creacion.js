@@ -89,7 +89,7 @@ function validarColores(){
             
         }
         });
-      coloresString+=`]`;
+      
     if(arrColores.length==0){
         alertValidacionesTexto.innerHTML +="Elige algún color. <br/>";
         alertValidaciones.style.display="block";
