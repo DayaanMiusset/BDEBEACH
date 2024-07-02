@@ -177,7 +177,7 @@ btnCrear.addEventListener("click", function(event){
         let elemento = `{"id":"${id.value}",
         "title":"${nombre.value}",
         "description":"${descripcion.value}",
-        "tallas":"${arrTallas}",
+        "talla":"${arrTallas}",
         "color":"${arrColores}",
         "price":${precio.value},
         "image":"${imagen.src}"}`;

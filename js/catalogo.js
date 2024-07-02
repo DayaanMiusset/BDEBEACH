@@ -5,9 +5,20 @@ function addItem(item){
   console.log(tonos);
   let coloresHTML="";
 
+  let tallas=item.talla.split(",");
+  console.log(tallas);
+  let tallasHTML="";
+
   tonos.forEach(color => {
     coloresHTML += `
     <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."  style ="background-color: ${color}">
+    `
+  }); 
+
+  tallas.forEach(talla => {
+    tallasHTML += `
+    <input class="form-check-input" type="radio" name="radioNoLabel" 
+    id="radioNoLabel1" value="" aria-label="..."  "> <span>${talla}</span>
     `
   }); 
 
@@ -21,6 +32,9 @@ function addItem(item){
         <p class="card-text">ID:${item.id} <br><strong>${item.title}</strong></p>
          <small class="card-text">${item.description}</small>
           <br><br>
+        <div class="tallas">
+        ${tallasHTML}
+        </div>
         <div class="colores">
         ${coloresHTML}
         </div>
@@ -49,6 +63,7 @@ function addItem(item){
         "description": "Top estilo bikini ajuble con tiras en la espalda y cuello",
         "color": "#000000,#D9AD26",
         "image": "./src/topmykonos1.jpg",
+        "talla": "S, M, L"
         // "rating": {
         //     "rate": 3.9,
         //     "count": 120
@@ -62,6 +77,7 @@ function addItem(item){
         "description": "Top de diseño ajustable por el frente ",
         "color": "#FFCBDB,#FF00FF,#77dde6,#FEF5E7,#F0B27A,#B695C0,#FF3339,#006341,#D9AD26",
         "image": "./src/topborabora2.jpg",
+        "talla": "S, M, L"
         // "rating": {
         //     "rate": 3.9,
         //     "count": 120
@@ -75,6 +91,7 @@ function addItem(item){
         "description": "Top con escote en forma de U en la espalda",
         "color": "#000000,#FEF5E7,#454B1B,#A04000",
         "image": "./src/topbahamas3.jpeg",
+        "talla": "S, M, L"
         // "rating": {
         //     "rate": 3.9,
         //     "count": 120
@@ -89,6 +106,7 @@ function addItem(item){
         "description": "Falda estilo sirena midi",
         "color": "#000000,#D9AD26",
         "image": "./src/faldasainttropez4.jpg",
+        "talla": "S, M, L"
         // "rating": {
         //     "rate": 3.9,
         //     "count": 120
@@ -102,6 +120,7 @@ function addItem(item){
         "description": "Falda estilo sirena corta",
         "color": "#A04000,#FEF5E7,#f9e79f,#efac87,#f0b27a",
         "image": "./src/minifaldasainttropez5.jpg",
+        "talla": "S, M, L"
             // "rating": {
             //     "rate": 3.9,
             //     "count": 120
@@ -115,6 +134,7 @@ function addItem(item){
         "description": "Mini falda con ajuste en la cintura",
         "color":  "#000000,#FEF5E7,#454B1B,#A04000",
         "image": "./src/faldaaruba6.jpg",
+        "talla": "S, M, L"
                 // "rating": {
                 //     "rate": 3.9,
                 //     "count": 120
@@ -156,6 +176,7 @@ function addItem(item){
         "description": "El set incluye 2 piezas: TOP Y BOTTOMS",
         "color": "#FFCBDB, #FF00FF,#77dde6,#FEF5E7,#F0B27A,#B695C0,#FF3339,#006341,#D9AD26",
         "image": "./src/bikinisetrio10.jpg",
+        "talla": "S, M, L"
                 // "rating": {
                 //     "rate": 3.9,
                 //     "count": 120
@@ -168,6 +189,7 @@ function addItem(item){
         "description": "El set incluye 2 piezas: TOP Y BOTTOMS",
         "color": "#FFCBDB, #FF00FF,#77dde6,#FEF5E7,#F0B27A,#B695C0,#FF3339,#006341,#D9AD26",
         "image": "./src/bikinisetborabora11.jpg",
+        "talla": "S, M, L"
                 // "rating": {
                 //     "rate": 3.9,
                 //     "count": 120
@@ -181,6 +203,7 @@ function addItem(item){
         "description": "El set incluye 3 piezas: TOP, BOTTOMS y PAREO",
         "color": "#FFFFFF",
         "image": "./src/bikinisethellokitty12.jpg",
+        "talla": "S, M, L"
                 // "rating": {
                 //     "rate": 3.9,
                 //     "count": 120
@@ -193,6 +216,7 @@ function addItem(item){
           "description": "El conjunto incluye 2 piezas: TOP Y FALDA MIDI con ajuste lateral",
           "color": "#D9AD26,#000000,#FFFFFF",
           "image": "./src/conjuntoborabora8.jpg",
+          "talla": "S, M, L"
                   // "rating": {
                   //     "rate": 3.9,
                   //     "count": 120
