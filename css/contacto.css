@@ -26,7 +26,7 @@ main {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 700px;
     margin: auto;
 }
 
@@ -51,10 +51,10 @@ main {
     box-sizing: border-box;
 }
 
-.contact-form-container button {
+.enviar{
     width: 100%;
     padding: 10px;
-    background-color: #8ea72892;
+    background-color: #A98C70;
     color: #fff;
     border: none;
     border-radius: 4px;

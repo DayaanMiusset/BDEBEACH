@@ -10,6 +10,7 @@ function addItem(item){
     <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."  style ="background-color: ${color}">
     `
   });
+
  
   const itemsContainer = document.getElementById("list-items");
   itemsContainer.insertAdjacentHTML ("beforeend", 
@@ -47,7 +48,7 @@ function addItem(item){
         "title": "Top Mykonos",
         "price": 750.00 ,
         "description": "Top estilo bikini ajuble con tiras en la espalda y cuello",
-        "color": ["#000000","#FFD700"],
+        "color": ["#000000","#D9AD26"],
         "image": "./src/topmykonos1.jpg",
         // "rating": {
         //     "rate": 3.9,
@@ -60,8 +61,9 @@ function addItem(item){
         "title": "Top Bora Bora",
         "price": 650.00 ,
         "description": "Top de diseño ajustable por el frente ",
-        "color": ["#FFCBDB", "#FF00FF","#77dde6","#FEF5E7","#F0B27A","#B695C0", "#FF3339","#006341","#FFD700"],
-        "tallas": [S, M, L, Unitalla],
+
+        "color": ["#FFCBDB", "#FF00FF","#77dde6","#FEF5E7","#F0B27A","#B695C0", "#FF3339","#006341","#D9AD26"],
+
         "image": "./src/topborabora2.jpg",
         // "rating": {
         //     "rate": 3.9,
@@ -88,7 +90,7 @@ function addItem(item){
         "title": "Falda Saint-Tropez",
         "price": 1450.00 ,
         "description": "Falda estilo sirena midi",
-        "color": ["#000000","#FFD700"],
+        "color": ["#000000","#D9AD26"],
         "image": "./src/faldasainttropez4.jpg",
         // "rating": {
         //     "rate": 3.9,
@@ -155,7 +157,7 @@ function addItem(item){
         "title": "Set Rio",
         "price": 1000.00 ,
         "description": "El set incluye 2 piezas: TOP Y BOTTOMS",
-        "color": ["#FFCBDB", "#FF00FF","#77dde6","#FEF5E7","#F0B27A","#B695C0", "#FF3339","#006341","#FFD700"],
+        "color": ["#FFCBDB", "#FF00FF","#77dde6","#FEF5E7","#F0B27A","#B695C0", "#FF3339","#006341","#D9AD26"],
         "image": "./src/bikinisetrio10.jpg",
                 // "rating": {
                 //     "rate": 3.9,
@@ -167,7 +169,7 @@ function addItem(item){
         "title": "Set Bora Bora",
         "price": 1200.00 ,
         "description": "El set incluye 2 piezas: TOP Y BOTTOMS",
-        "color": ["#FFCBDB", "#FF00FF","#77dde6","#FEF5E7","#F0B27A","#B695C0", "#FF3339","#006341","#FFD700"],
+        "color": ["#FFCBDB", "#FF00FF","#77dde6","#FEF5E7","#F0B27A","#B695C0", "#FF3339","#006341","#D9AD26"],
         "image": "./src/bikinisetborabora11.jpg",
                 // "rating": {
                 //     "rate": 3.9,
@@ -192,7 +194,7 @@ function addItem(item){
           "title": "Conjunto Bora Bora",
           "price": 1640.00,
           "description": "El conjunto incluye 2 piezas: TOP Y FALDA MIDI con ajuste lateral",
-          "color": ["#FFD700","#000000","#FFFFFF"],
+          "color": ["#D9AD26","#000000","#FFFFFF"],
           "image": "./src/conjuntoborabora8.jpg",
                   // "rating": {
                   //     "rate": 3.9,
