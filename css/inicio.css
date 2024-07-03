@@ -18,6 +18,36 @@
 .cardL{
     
 }
+
+h5{
+    font-weight: 650;
+}
+
+p{
+    font-weight: 500;
+}
+
+.carousel-caption{
+    color: black;
+}
+
+@media (min-width: 425px) {
+    .card-title {
+        font-size: 5em;
+    }
+}
+@media (max-width: 425px)  {
+    .card-title {
+        font-size: 2.5em;
+    }
+}
+
+@media (min-width: 768px)  {
+    .card-title {
+        margin-top: 1.8em;        
+    }
+}
+
 /* FORMATO DEL HEADER NAVEGADOR INICIA*/
 .nav-link:hover{
     background-color: #dcb780a6;
