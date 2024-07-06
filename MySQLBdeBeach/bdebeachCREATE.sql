@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `beach`.`Usuario` (
   `nombre` VARCHAR(45) NOT NULL,
   `apellido` VARCHAR(45) NULL,
   `correo` VARCHAR(45) NOT NULL,
-  `contraseña` VARCHAR(45) NOT NULL,
+  `contrasena` VARCHAR(45) NOT NULL,
   `telefono` VARCHAR(10) NOT NULL,
   `callenumero` VARCHAR(45) NOT NULL,
   `colonia` VARCHAR(45) NOT NULL,
@@ -66,12 +66,13 @@ ENGINE = InnoDB;
 -- Table `beach`.`DetallesPedido`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `beach`.`DetallesPedido` (
+  `id` INT NOT NULL AUTO_INCREMENT,
   `talla` VARCHAR(1) NOT NULL,
   `color` VARCHAR(45) NOT NULL,
   `cantidad` VARCHAR(45) NOT NULL,
   `Pedido_id` INT NOT NULL,
   `Productos_id` INT NOT NULL,
-  PRIMARY KEY (`Productos_id`, `Pedido_id`),
+  PRIMARY KEY (`id`, `Pedido_id`, `Productos_id`),
   INDEX `fk_DetallesPedido_Productos1_idx` (`Productos_id` ASC) VISIBLE)
 ENGINE = InnoDB;
 
