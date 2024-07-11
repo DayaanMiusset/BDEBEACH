@@ -112,39 +112,29 @@ btnRegistrarse.addEventListener("click", function (event){
         apellidos.style.border="";
         txtEmail.style.border="";
         if (validarNombre() && validarApellidos() && validarEmail() && validarContraseña()&& validarConfirmacion()){
-            let elemento = `{"nombre":"${nombre.value}",
-                    "apellidos":"${apellidos.value}",
-                    "email":"${txtEmail.value}",
-                    "contraseña":"${contraseña.value}"}`;                    
-                    usuarios.push(JSON.parse(elemento));
-                    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+        //     let elemento = `{"nombre":"${nombre.value}",
+        //             "apellidos":"${apellidos.value}",
+        //             "email":"${txtEmail.value}",
+        //             "contraseña":"${contraseña.value}"}`;                    
+        //             usuarios.push(JSON.parse(elemento));
+        //             localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-                    let nuevoElemento = `{"nombre" : "${nombre.value}", "email" : "${txtEmail}"}`;
-                    localStorage.setItem("usuarioActual", nuevoElemento);
+        //             let nuevoElemento = `{"nombre" : "${nombre.value}", "email" : "${txtEmail}"}`;
+        //             localStorage.setItem("usuarioActual", nuevoElemento);
 
-                    confirmarContraseña.value="";
-                    contraseña.value="";
-                    nombre.value="";
-                    apellidos.value="";
-                    txtEmail.value="";
+        //
+        fetchRegistro();             
+        }
+              
+    });//btnRegistro addEvent
 
-                    alertEnviadoTexto.innerHTML = "El registro ha sido exitoso. <br> <strong>Ya puedes inicar sesión.</strong>";
-                    alertEnviado.style.display = "block";
-                    
-                    setTimeout(function(){
-                        window.location.href = "./index.html";
-                    },2000);
-                }
-                
-    })
-
-    window.addEventListener("load", function(event){
-        event.preventDefault();
+    // window.addEventListener("load", function(event){
+    //     event.preventDefault();
       
-        if(this.localStorage.getItem("usuarios")!=null){
-            usuarios = JSON.parse(localStorage.getItem("usuarios"));
-        }     
-    });
+    //     if(this.localStorage.getItem("usuarios")!=null){
+    //         usuarios = JSON.parse(localStorage.getItem("usuarios"));
+    //     }     
+    // });
 
     ojoPassword.addEventListener("click" , function (event){
         event.preventDefault();
@@ -154,6 +144,7 @@ btnRegistrarse.addEventListener("click", function (event){
             contraseña.type = "password";
         }
     });
+
     ojoPassword2.addEventListener("click" , function (event){
         event.preventDefault();
         if (confirmarContraseña.type == "password") {
@@ -163,4 +154,98 @@ btnRegistrarse.addEventListener("click", function (event){
         }
     });
 
+
+    function fetchRegistro(){
+        const myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+    
+        const raw = JSON.stringify({
+            "nombre": `${nombre.value}`,
+            "apellido": `${apellidos.value}`,
+            "correo": `${txtEmail.value}`,
+            "contrasena": `${contraseña.value}`
+           
+        });
+    
+        const requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: raw,
+            redirect: "follow"
+        };
+    
+        fetch("http://localhost:8088/api/usuarios/", requestOptions)
+            .then(response =>{ response.json()
+            .then(result => {console.log(result)
+             if(result.nombre){
+                fetchLogin();
+                localStorage.setItem("usuarioActual", result.nombre)
+                confirmarContraseña.value="";
+                            contraseña.value="";
+                            nombre.value="";
+                            apellidos.value="";
+                            txtEmail.value="";
+        
+                            alertEnviadoTexto.innerHTML = "El registro ha sido exitoso. <br> <strong>Ya puedes inicar sesión.</strong>";
+                            alertEnviado.style.display = "block";
+                            
+                            // setTimeout(function(){
+                            //     window.location.href = "./index.html";
+                            // },2000);
+    
+             }  else{
+                mensajeError();
+             } 
+           
+    })
+            .catch(
+                (error) => {console.error(error);} );
+    })
+    
+    }//fetchLogin
+
+    
+function fetchLogin(){
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify({
+        "correo": `${txtEmail.value}`,
+        "contrasena": `${contraseña.value}`
+    });
+
+    const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow"
+    };
+
+    fetch("http://localhost:8088/api/login/", requestOptions)
+        .then(response =>{ response.json()
+        .then(result => {console.log(result)
+         if(result.accessToken){
+            localStorage.setItem('token', result.accessToken)
+              alertEnviadoTexto.innerHTML = "Se inició sesión";
+             alertEnviado.style.display = "block";
+
+        setTimeout(function () {
+            window.location.href = "./index.html";
+        });
+         }  else{
+            mensajeError();
+         } 
+       
+})
+        .catch(
+            (error) => {console.error(error);} );
+})
+
+}//fetchLogin
+
+    function mensajeError(){
+        alertValidacionesTexto.innerHTML="Ya existe una cuenta con este correo";
+        alertValidaciones.style.display="block";
+
+    }
 

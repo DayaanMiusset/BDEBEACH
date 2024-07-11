@@ -22,12 +22,13 @@ CREATE TABLE IF NOT EXISTS `beach`.`Usuario` (
   `nombre` VARCHAR(45) NOT NULL,
   `apellido` VARCHAR(45) NULL,
   `correo` VARCHAR(45) NOT NULL,
-  `contrasena` VARCHAR(45) NOT NULL,
-  `telefono` VARCHAR(10) NOT NULL,
-  `callenumero` VARCHAR(45) NOT NULL,
-  `colonia` VARCHAR(45) NOT NULL,
-  `estado` VARCHAR(45) NOT NULL,
-  `CP` VARCHAR(5) NOT NULL,
+  `contrasena` VARCHAR(250) NOT NULL,
+	`rol` VARCHAR(10) NULL DEFAULT 'user',
+  `telefono` VARCHAR(10) NULL DEFAULT NULL,
+  `callenumero` VARCHAR(45) NULL DEFAULT NULL,
+  `colonia` VARCHAR(45) NULL DEFAULT NULL,
+  `estado` VARCHAR(45) NULL DEFAULT NULL,
+  `CP` VARCHAR(5) NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 

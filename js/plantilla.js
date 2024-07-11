@@ -112,9 +112,9 @@ let cerrar=document.getElementById("cerrar");
 window.addEventListener("load", function(event){
   event.preventDefault();
   if(this.localStorage.getItem("usuarioActual")!=null){
-    usuarioActual=JSON.parse (localStorage.getItem("usuarioActual"));
+    usuarioActual=localStorage.getItem("usuarioActual");
     sesion.style.display="none";
-    usuario.innerHTML+=usuarioActual.nombre;
+    usuario.innerHTML+=usuarioActual;
     icono.style.display="block";
   }
 
@@ -125,6 +125,7 @@ cerrar.addEventListener("click", function(event){
   sesion.style.display="block";
   icono.style.display="none";
   localStorage.removeItem("usuarioActual");
+  localStorage.removeItem("token");
 
   setTimeout(function(){
     window.location.href = "./iniSesion.html";

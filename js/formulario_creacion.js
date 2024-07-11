@@ -1,5 +1,4 @@
 let nombre = document.getElementById("nombre");
-let id = document.getElementById("id");
 let descripcion = document.getElementById("descripcion");
 let numeroDePiezas = document.getElementById("numeroDePiezas");
 let precio = document.getElementById("precio");
@@ -146,7 +145,6 @@ btnCrear.addEventListener("click", function(event){
     alertValidaciones.style.display="none";
     alertValidaciones.style.border="";
     nombre.style.border="";
-    id.style.border="";
     tallaS.style.border="";
     descripcion.style.border="";
     precio.style.border="";
@@ -171,36 +169,88 @@ btnCrear.addEventListener("click", function(event){
         btnImagen.style.border="";       
     }
 
-     if (validarNombre() && validarId(id) && validarDescripcion() && validarPrecio() && imagenValida && validarTallas() && validarColores() ){
+     if (validarNombre() && validarDescripcion() && validarPrecio() && imagenValida && validarTallas() && validarColores() ){
 
-        
-        let elemento = `{"id":"${id.value}",
-        "title":"${nombre.value}",
-        "description":"${descripcion.value}",
-        "talla":"${arrTallas}",
-        "color":"${arrColores}",
-        "price":${precio.value},
-        "image":"${imagen.src}"}`;
-        datos.push(JSON.parse(elemento));
-        console.log(datos);
-        localStorage.setItem("datos", JSON.stringify(datos));
+        fetchCreacion();
+        // let elemento = `{"id":"${id.value}",
+        // "title":"${nombre.value}",
+        // "description":"${descripcion.value}",
+        // "talla":"${arrTallas}",
+        // "color":"${arrColores}",
+        // "price":${precio.value},
+        // "image":"${imagen.src}"}`;
+        // datos.push(JSON.parse(elemento));
+        // console.log(datos);
+        // localStorage.setItem("datos", JSON.stringify(datos));
 
-        id.value="";
-        nombre.value="";
-        descripcion.value="";
-        precio.value="";
-        imagen.src="";
-        arrTallas=[];
-        arrColores=[];
+        // id.value="";
+        // nombre.value="";
+        // descripcion.value="";
+        // precio.value="";
+        // imagen.src="";
+        // arrTallas=[];
+        // arrColores=[];
     
-        alertEnviadoTexto.innerHTML = "El producto ha sido agregado exitosamente.";
-        alertEnviado.style.display = "block"; 
+        // alertEnviadoTexto.innerHTML = "El producto ha sido agregado exitosamente.";
+        // alertEnviado.style.display = "block"; 
+
     }
 
     
 
 
 });
+function fetchCreacion(){
+    let token ="Bearer: " + localStorage.getItem("token");
+    const myHeaders = new Headers();
+myHeaders.append("Authorization", token);
+myHeaders.append("Content-Type", "application/json");
+const raw = JSON.stringify({
+    "nombre":`${nombre.value}"`,
+    "descripcion":`${descripcion.value}`,
+    "colores":`${arrColores}`,
+    "tallas": `${arrTallas}`,
+    "img": `${imagen.src}`,
+    "precio": `${precio.value}`
+  });
+
+const requestOptions = {
+  method: "POST",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch("http://localhost:8088/api/productos/", requestOptions)
+  .then((response) => response.json())
+  .then((result) => {console.log(result)
+   if(result.nombre){
+    nombre.value="";
+        descripcion.value="";
+        precio.value="";
+        imagen.src="";
+        arrTallas=[];
+        tallas.forEach(tallas => {
+            tallas.checked = false;
+        });
+        arrColores=[];
+            colores.forEach(colores => {
+                colores.checked = false;
+
+            });
+        
+        alertEnviadoTexto.innerHTML = "Se ha creado un nuevo producto";
+        alertEnviado.style.display = "block"; 
+  } else{
+    alertValidacionesTexto.innerHTML ="El nombre de éste producto ya existe.<br/>";
+    alertValidaciones.style.display="block";
+  }
+  })
+  .catch((error) => console.error(error));
+
+  
+}
+
 
 btnRemove.addEventListener("click", function(event){
     let isValid = true;
